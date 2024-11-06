@@ -1,7 +1,7 @@
 function Home(){
     return(
         <div className="home">
-            <h2>Welcome to the Map Of The Human Body!</h2>
+            <h2>Homepage</h2>
         </div>
     );
 }
