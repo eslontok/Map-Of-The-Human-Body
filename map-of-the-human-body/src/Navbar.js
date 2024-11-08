@@ -6,9 +6,8 @@ function Navbar(){
                 <a href="/">Home</a>
                 <a href="/">Map</a>
                 <a href="/">Systems</a>
-                <a href="/">Diseases</a>
-                <a href="/">Treatments</a>
-                <a href="/">About</a>
+                <a href="/">Diseases/Treatments</a>
+                <a href="/">Discussions</a>
             </div>
         </nav>
     );
