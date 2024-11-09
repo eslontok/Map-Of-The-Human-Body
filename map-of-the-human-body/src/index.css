@@ -48,14 +48,23 @@
 .home h2 {
   color: #FFFFFF;
 }
-.postPreview {
+
+/* DISCUSSIONS */
+
+.discussions h2 {
+  color: #FFFFFF;
+}
+
+/* DISCUSSIONS LIST */
+
+.discussionPreview {
   padding: 5px 5px;
   margin: 15px 0px;
 }
-.postPreview:hover {
+.discussionPreview:hover {
   box-shadow: 5px 5px 15px #36454F;
 }
-.postPreview h3 {
+.discussionPreview h3 {
   font-size: 20px;
   color: #FFFFFF;
   margin-bottom: 5px;

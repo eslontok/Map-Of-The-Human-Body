@@ -1,12 +1,14 @@
 import Navbar from './Navbar';
 import Home from './Home';
+import Discussions from './Discussions';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar/>
       <div className="content">
-        <Home />
+        {/*<Home/>*/}  {/* TEMPORARILY DISABLED */}
+        <Discussions/>
       </div>
     </div>
   );
