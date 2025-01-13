@@ -1,1 +1,4 @@
-# Map-Of-The-Human-Body
+# About Map Of The Human Body (In Progress)
+Note: This project is IN PROGRESS - the following description includes the intended functionalities. This is a React web application that displays a general map of the human body. The interactive webpage includes several physiological systems (Nervous, Musculoskeletal, Cardiovascular, Respiratory, Immune, Renal, etc.) along with their functions, common diseases, and treatments. There is also a Discussions section where users can ask/answer questions and share experiences about their health.
+# How To Run Map Of The Human Body
+You must have a Node version that can run Node version 18.20.4. After downloading the project folder, navigate to the project root directory and run the "npm install" command in the terminal to install the required dependencies to run this project (creates the "node_modules" folder and stores the dependencies there). Afterwards, run the "npm run start" command in the terminal to start a local development server and preview the React web application in a browser.
