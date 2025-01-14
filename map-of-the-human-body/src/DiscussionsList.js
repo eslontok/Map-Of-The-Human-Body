@@ -10,7 +10,17 @@ function DiscussionsList(props){
                     <h3>{discussion.title}</h3>
                     <h4>Posted by: {discussion.author}</h4>
                     <p>{discussion.body}</p>
-                    <button onClick={() => handleDelete(discussion.id)}>Delete</button>
+                    <button>
+                        <span className="material-symbols-outlined">thumb_up</span>
+                        Likes
+                    </button>
+                    <button>
+                        <span className="material-symbols-outlined">thumb_down</span>
+                        Dislikes
+                    </button>
+                    <button onClick={() => handleDelete(discussion.id)} style={{
+                        float: "right"
+                    }}>Delete</button>
                 </div>
             ))}
         </div>
