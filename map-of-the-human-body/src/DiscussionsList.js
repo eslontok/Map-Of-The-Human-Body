@@ -23,6 +23,10 @@ function DiscussionsList(props){
                     <button onClick={() => handleDelete(discussion.id)} style={{
                         float: "right"
                     }}>Delete</button>
+                    <h4 style={{
+                        marginTop: "5px",
+                        marginLeft: "5px"
+                    }}>{discussion.replies.length} replies...</h4>
                 </div>
             ))}
         </div>

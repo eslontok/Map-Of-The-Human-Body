@@ -35,8 +35,9 @@ function Discussions(){
     }
 
     useEffect(() => {
+        const abort = new AbortController();
         setTimeout(() => {
-            fetch("http://localhost:8000/discussions")
+            fetch("http://localhost:8000/discussions", {signal: abort.signal})
                 .then(response => {
                     if(!response.ok){
                         throw Error("ERROR: Server reached but could not fetch data!");
@@ -49,10 +50,13 @@ function Discussions(){
                     setError(null);
                 })
                 .catch(error =>{
-                    setIsLoading(false);
-                    setError(error.message);
+                    if(error.name !== "AbortError"){
+                        setIsLoading(false);
+                        setError(error.message);
+                    }
                 });
         }, 1000);
+        return () => abort.abort();
     }, []);
 
     return(

@@ -7,8 +7,9 @@ function useFetch(urlEndpoint){
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        const abort = new AbortController();
         setTimeout(() => {
-            fetch(urlEndpoint)
+            fetch(urlEndpoint, {signal: abort.signal})
                 .then(response => {
                     if(!response.ok){
                         throw Error("ERROR: Server reached but could not fetch data!");
@@ -21,10 +22,13 @@ function useFetch(urlEndpoint){
                     setError(null);
                 })
                 .catch(error =>{
-                    setIsLoading(false);
-                    setError(error.message);
+                    if(error.name !== "AbortError"){
+                        setIsLoading(false);
+                        setError(error.message);
+                    }
                 });
         }, 1000);
+        return () => abort.abort();
     }, [urlEndpoint]);
 
     return {data, isLoading, error};
