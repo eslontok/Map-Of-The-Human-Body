@@ -86,3 +86,16 @@
 .discussionPreview a {
   text-decoration: none;
 }
+
+/* DISCUSSION DETAILS */
+
+.discussionDetails h2 {
+  color: #FFFFFF;
+}
+.discussionDetails h3 {
+  color: #FFFFFF;
+}
+.discussionDetails p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
