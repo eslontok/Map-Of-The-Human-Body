@@ -83,3 +83,6 @@
   color: #FFFFFF;
   margin-right: 5px;
 }
+.discussionPreview a {
+  text-decoration: none;
+}

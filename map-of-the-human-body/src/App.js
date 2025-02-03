@@ -4,6 +4,7 @@ import Map from './Map';
 import Systems from './Systems';
 import Diseases from './Diseases';
 import Discussions from './Discussions';
+import DiscussionDetails from './DiscussionDetails';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/systems" element={<Systems/>}></Route>
             <Route path="/diseases" element={<Diseases/>}></Route>
             <Route path="/discussions" element={<Discussions/>}></Route>
+            <Route path="/discussions/:id" element={<DiscussionDetails/>}></Route>
           </Routes>
         </div>
       </div>
