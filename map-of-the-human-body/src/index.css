@@ -52,8 +52,17 @@
 
 /* DISCUSSIONS */
 
+.discussions h2, button {
+  display: inline-block;
+}
 .discussions h2 {
   color: #FFFFFF;
+}
+.discussions button {
+  color: #FFFFFF;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* DISCUSSIONS LIST */
@@ -73,14 +82,12 @@
 }
 .discussionPreview p {
   margin-top: 5px;
-  margin-bottom: 10px;
-}
-.discussionPreview button {
-  color: #FFFFFF;
+  margin-bottom: 5px;
 }
 .discussionPreview span {
   font-size: 10px;
   color: #FFFFFF;
+  font-weight: bold;
   margin-right: 5px;
 }
 .discussionPreview a {

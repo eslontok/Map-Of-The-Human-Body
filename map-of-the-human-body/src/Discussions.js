@@ -62,6 +62,7 @@ function Discussions(){
     return(
         <div className="discussions">
             <h2>Discussions</h2>
+            <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
             {error && <div style={{marginTop: "20px", color: "#D2042D"}}>{error}</div>}
             {isLoading && <div style={{marginTop: "20px"}}>Loading discussions...</div>}
             {discussions && <DiscussionsList discussions={discussions} handleDelete={handleDelete} handleLike={handleLike} handleDislike={handleDislike}/>}
