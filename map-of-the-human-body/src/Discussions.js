@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import DiscussionsList from "./DiscussionsList";
+import {Link} from "react-router-dom";
 
 function Discussions(){
 
@@ -62,7 +63,9 @@ function Discussions(){
     return(
         <div className="discussions">
             <h2>Discussions</h2>
-            <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
+            <Link to="/create">
+                <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
+            </Link>
             {error && <div style={{marginTop: "20px", color: "#D2042D"}}>{error}</div>}
             {isLoading && <div style={{marginTop: "20px"}}>Loading discussions...</div>}
             {discussions && <DiscussionsList discussions={discussions} handleDelete={handleDelete} handleLike={handleLike} handleDislike={handleDislike}/>}

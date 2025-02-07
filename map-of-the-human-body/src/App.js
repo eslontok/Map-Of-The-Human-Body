@@ -5,6 +5,7 @@ import Systems from './Systems';
 import Diseases from './Diseases';
 import Discussions from './Discussions';
 import DiscussionDetails from './DiscussionDetails';
+import Create from './Create';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/diseases" element={<Diseases/>}></Route>
             <Route path="/discussions" element={<Discussions/>}></Route>
             <Route path="/discussions/:id" element={<DiscussionDetails/>}></Route>
+            <Route path="/create" element={<Create/>}></Route>
           </Routes>
         </div>
       </div>
