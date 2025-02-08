@@ -9,10 +9,22 @@ function Create(){
     const dislikes = 0;
     const replies = [];
 
+    const [isUploading, setIsUploading] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const discussion = {title, author, body, likes, dislikes, replies};
-        console.log(discussion);
+        setIsUploading(true);
+        setTimeout(() => {
+            fetch("http://localhost:8000/discussions", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(discussion)
+            }).then(() => {
+                setIsUploading(false);
+            });
+        }, 500);
+        
     }
 
     return(
@@ -24,10 +36,8 @@ function Create(){
                 <label>Author:</label>
                 <input type="text" required value={author} onChange={(e) => setAuthor(e.target.value)}/>
                 <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
-                <button>Upload</button>
-                <p>{title}</p>
-                <p>{author}</p>
-                <p>{body}</p>
+                {!isUploading && <button>Upload</button>}
+                {isUploading && <button disabled>Uploading...</button>}
             </form>
         </div>
     );

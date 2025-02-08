@@ -27,7 +27,7 @@ function useFetch(urlEndpoint){
                         setError(error.message);
                     }
                 });
-        }, 1000);
+        }, 500);
         return () => abort.abort();
     }, [urlEndpoint]);
 
