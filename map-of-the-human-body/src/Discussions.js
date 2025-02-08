@@ -30,11 +30,6 @@ function Discussions(){
         setDiscussions(newDiscussions);
     }
 
-    const handleDelete = (id) => {
-        const newDiscussions = discussions.filter(discussion => discussion.id !== id);
-        setDiscussions(newDiscussions);
-    }
-
     useEffect(() => {
         const abort = new AbortController();
         setTimeout(() => {
@@ -68,7 +63,7 @@ function Discussions(){
             </Link>
             {error && <div style={{marginTop: "20px", color: "#D2042D"}}>{error}</div>}
             {isLoading && <div style={{marginTop: "20px"}}>Loading discussions...</div>}
-            {discussions && <DiscussionsList discussions={discussions} handleDelete={handleDelete} handleLike={handleLike} handleDislike={handleDislike}/>}
+            {discussions && <DiscussionsList discussions={discussions} handleLike={handleLike} handleDislike={handleDislike}/>}
         </div>
     );
 }

@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 function DiscussionsList(props){
 
     const discussions = props.discussions;
-    const handleDelete = props.handleDelete;
     const handleLike = props.handleLike;
     const handleDislike = props.handleDislike;
 
@@ -24,9 +23,6 @@ function DiscussionsList(props){
                         <span className="material-symbols-outlined">thumb_down</span>
                         {discussion.dislikes}
                     </button>
-                    <button onClick={() => handleDelete(discussion.id)} style={{
-                        float: "right"
-                    }}>Delete</button>
                     <h4 style={{
                         marginTop: "5px",
                         marginLeft: "5px"
