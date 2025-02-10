@@ -53,6 +53,15 @@
       "likes": 0,
       "dislikes": 0,
       "replies": []
+    },
+    {
+      "id": "7ebb",
+      "title": "POST Test 5",
+      "author": "POST Author 5",
+      "body": "Random content by POST Author 5",
+      "likes": 0,
+      "dislikes": 0,
+      "replies": []
     }
   ]
 }

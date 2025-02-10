@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 function Create(){
 
@@ -10,6 +11,7 @@ function Create(){
     const replies = [];
 
     const [isUploading, setIsUploading] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +24,7 @@ function Create(){
                 body: JSON.stringify(discussion)
             }).then(() => {
                 setIsUploading(false);
+                navigate("/discussions");
             });
         }, 500);
         
