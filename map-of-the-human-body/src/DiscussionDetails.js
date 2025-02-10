@@ -1,10 +1,19 @@
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import useFetch from "./useFetch";
 
 function DiscussionDetails(){
 
     const {id} = useParams();
     const {data: discussion, isLoading, error} = useFetch("http://localhost:8000/discussions/" + id);
+    const navigate = useNavigate();
+
+    const handleDelete = () => {
+        fetch("http://localhost:8000/discussions/" + id, {
+            method: "DELETE"
+        }).then(() => {
+            navigate("/discussions");
+        });
+    }
 
     return(
         <div className="discussionDetails">
@@ -15,6 +24,7 @@ function DiscussionDetails(){
                     <h2>{discussion.title}</h2>
                     <h3>Posted by: {discussion.author}</h3>
                     <p>{discussion.body}</p>
+                    <button onClick={handleDelete} style={{float: "right"}}>Delete</button>
                 </article>
             )}
         </div>
