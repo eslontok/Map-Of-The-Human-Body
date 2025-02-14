@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useParams, useNavigate} from "react-router-dom";
+import {useParams, useNavigate, Link} from "react-router-dom";
 import useFetch from "./useFetch";
 
 function DiscussionDetails(){
@@ -22,10 +22,6 @@ function DiscussionDetails(){
         }, 500);
     }
 
-    const handleEdit = () => {
-        console.log("Editor Enabled");
-    }
-
     return(
         <div className="discussionDetails">
             {error && <div style={{marginTop: "5px", color: "#D2042D"}}>{error}</div>}
@@ -36,7 +32,9 @@ function DiscussionDetails(){
                     <h3>Posted by: {discussion.author}</h3>
                     <p>{discussion.body}</p>
                     <div className="discussionButtons">
-                        <button onClick={handleEdit}>Edit</button>
+                        <Link to={`/discussions/${id}/edit`}>
+                            <button>Edit</button>
+                        </Link>
                         {!isDeleting && <button onClick={handleDelete}>Delete</button>}
                         {isDeleting && <button disabled>Deleting...</button>}
                     </div>
