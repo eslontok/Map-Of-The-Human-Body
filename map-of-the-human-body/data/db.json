@@ -65,9 +65,9 @@
     },
     {
       "id": "42cb",
-      "title": "Random Discussion 5",
-      "author": "Random Author 5",
-      "body": "This body was also modified using the PATCH request method :)",
+      "title": "Random Discussion 5 - bugfix check 1",
+      "author": "Random Author 5 - bugfix check 2",
+      "body": "After some bugfixes, hopefully, this works :/",
       "likes": 0,
       "dislikes": 0,
       "replies": []

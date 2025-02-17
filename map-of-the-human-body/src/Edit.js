@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
-import useFetch from "./useFetch";
 
 function Edit(){
 
@@ -62,7 +61,7 @@ function Edit(){
                 });
         }, 500);
         return () => abort.abort();
-    }, []);
+    }, [id]);
 
     return(
         <div className="edit">
