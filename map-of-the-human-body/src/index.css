@@ -83,11 +83,12 @@
 }
 .discussionPreview p {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .discussionPreview span {
   font-size: 10px;
   color: #FFFFFF;
+  background: #353935;
   font-weight: bold;
   margin-right: 5px;
 }
@@ -105,18 +106,27 @@
 }
 .discussionDetails p {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+.discussionDetails button {
+  color: #FFFFFF;
+  background: #353935;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.discussionDetails span {
+  font-size: 10px;
+  color: #FFFFFF;
+  background: #353935;
+  font-weight: bold;
+  margin-right: 5px;
 }
 .discussionButtons {
   float: right;
 }
 .discussionButtons button {
-  color: #FFFFFF;
   width: 100px;
-  background: #353935;
-  border-radius: 16px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 /* EDIT */

@@ -31,6 +31,14 @@ function DiscussionDetails(){
                     <h2>{discussion.title}</h2>
                     <h3>Posted by: {discussion.author}</h3>
                     <p>{discussion.body}</p>
+                    <button>
+                        <span className="material-symbols-outlined">thumb_up</span>
+                        {discussion.likes}
+                    </button>
+                    <button>
+                        <span className="material-symbols-outlined">thumb_down</span>
+                        {discussion.dislikes}
+                    </button>
                     <div className="discussionButtons">
                         <Link to={`/discussions/${id}/edit`}>
                             <button>Edit</button>
