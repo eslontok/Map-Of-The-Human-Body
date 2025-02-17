@@ -24,8 +24,8 @@ function DiscussionDetails(){
 
     return(
         <div className="discussionDetails">
-            {error && <div style={{marginTop: "5px", color: "#D2042D"}}>{error}</div>}
-            {isLoading && <div style={{marginTop: "5px"}}>Loading discussion...</div>}
+            {error && <div style={{color: "#D2042D"}}>{error}</div>}
+            {isLoading && <div>Loading discussion...</div>}
             {discussion && (
                 <article>
                     <h2>{discussion.title}</h2>
