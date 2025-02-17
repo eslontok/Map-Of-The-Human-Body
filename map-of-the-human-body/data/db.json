@@ -49,7 +49,7 @@
       "id": "4451",
       "title": "Random Discussion 4",
       "author": "Random Author 4",
-      "body": "Random content by random author 4",
+      "body": "This body was modified using the PATCH request method :)",
       "likes": 0,
       "dislikes": 0,
       "replies": []
