@@ -23,10 +23,10 @@ function DiscussionsList(props){
                         <span className="material-symbols-outlined">thumb_down</span>
                         {discussion.dislikes}
                     </button>
-                    <h4 style={{
-                        marginTop: "5px",
-                        marginLeft: "5px"
-                    }}>{discussion.replies.length} replies...</h4>
+                    <button>
+                        <span className="material-symbols-outlined">mode_comment</span>
+                        {discussion.replies.length}
+                    </button>
                 </div>
             ))}
         </div>
