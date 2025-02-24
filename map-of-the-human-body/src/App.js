@@ -24,7 +24,7 @@ function App() {
             <Route path="/discussions" element={<Discussions/>}></Route>
             <Route path="/discussions/:id" element={<DiscussionDetails/>}></Route>
             <Route path="/discussions/:id/edit" element={<Edit/>}></Route>
-            <Route path="/create" element={<Create/>}></Route>
+            <Route path="/discussions/create" element={<Create/>}></Route>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
         </div>

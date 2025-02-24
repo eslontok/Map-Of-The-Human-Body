@@ -1,12 +1,10 @@
-import {useState, useEffect} from "react";
-import DiscussionsList from "./DiscussionsList";
 import {Link} from "react-router-dom";
+import DiscussionsList from "./DiscussionsList";
+import useFetch from "./useFetch";
 
 function Discussions(){
 
-    const [discussions, setDiscussions] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const {data: discussions, setData: setDiscussions, isLoading, error} = useFetch("http://localhost:8000/discussions");
 
     const updateLikeDislike = (id, like, dislike) => {
         const newDiscussions = discussions.map(discussion => {
@@ -28,35 +26,10 @@ function Discussions(){
         setDiscussions(newDiscussions);
     }
 
-    useEffect(() => {
-        const abort = new AbortController();
-        setTimeout(() => {
-            fetch("http://localhost:8000/discussions", {signal: abort.signal})
-                .then(response => {
-                    if(!response.ok){
-                        throw Error("ERROR: Server reached but could not fetch data!");
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    setDiscussions(data);
-                    setIsLoading(false);
-                    setError(null);
-                })
-                .catch(error =>{
-                    if(error.name !== "AbortError"){
-                        setIsLoading(false);
-                        setError(error.message);
-                    }
-                });
-        }, 500);
-        return () => abort.abort();
-    }, []);
-
     return(
         <div className="discussions">
             <h2>Discussions</h2>
-            <Link to="/create">
+            <Link to="/discussions/create">
                 <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
             </Link>
             {error && <div style={{marginTop: "20px", color: "#D2042D"}}>{error}</div>}
