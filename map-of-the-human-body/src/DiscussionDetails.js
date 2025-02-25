@@ -105,6 +105,12 @@ function DiscussionDetails(){
                         {(!map.has(id) || map.get(id)[1] === false) && <span className="material-symbols-outlined">thumb_down</span>}
                         {discussion.dislikes}
                     </button>
+                    <Link to={`/discussions/${id}/reply`}>
+                        <button>
+                            <span className="material-symbols-outlined">mode_comment</span>
+                            {discussion.replies.length}
+                        </button>
+                    </Link>
                     <div className="discussionButtons">
                         <Link to={`/discussions/${id}/edit`}>
                             <button>Edit</button>

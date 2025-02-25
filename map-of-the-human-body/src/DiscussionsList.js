@@ -73,10 +73,12 @@ function DiscussionsList(props){
                         {(!map.has(discussion.id) || map.get(discussion.id)[1] === false) && <span className="material-symbols-outlined">thumb_down</span>}
                         {discussion.dislikes}
                     </button>
-                    <button>
-                        <span className="material-symbols-outlined">mode_comment</span>
-                        {discussion.replies.length}
-                    </button>
+                    <Link to={`/discussions/${discussion.id}`}>
+                        <button>
+                            <span className="material-symbols-outlined">mode_comment</span>
+                            {discussion.replies.length}
+                        </button>
+                    </Link>
                 </div>
             ))}
         </div>
