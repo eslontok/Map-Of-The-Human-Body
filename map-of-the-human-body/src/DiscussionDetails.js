@@ -108,7 +108,7 @@ function DiscussionDetails(){
                     <Link to={`/discussions/${id}/comments`}>
                         <button>
                             <span className="material-symbols-outlined">mode_comment</span>
-                            {discussion.replies.length}
+                            {discussion.comments.length}
                         </button>
                     </Link>
                     <div className="discussionButtons">

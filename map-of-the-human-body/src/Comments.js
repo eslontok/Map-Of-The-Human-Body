@@ -17,16 +17,16 @@ function Comments(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reply = {author, body, likes, dislikes};
-        const newReplies = [...discussion.replies];
-        newReplies.push(reply);
+        const comment = {author, body, likes, dislikes};
+        const newComments = [...discussion.comments];
+        newComments.push(comment);
         setIsUploading(true);
         setTimeout(() => {
             fetch("http://localhost:8000/discussions/" + id, {
                 method: "PATCH",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
-                    replies: newReplies
+                    comments: newComments
                 })
             }).then(() => {
                 setIsUploading(false);

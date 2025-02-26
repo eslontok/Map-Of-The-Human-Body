@@ -8,14 +8,14 @@ function Create(){
     const [body, setBody] = useState("");
     const likes = 0;
     const dislikes = 0;
-    const replies = [];
+    const comments = [];
 
     const [isUploading, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const discussion = {title, author, body, likes, dislikes, replies};
+        const discussion = {title, author, body, likes, dislikes, comments};
         setIsUploading(true);
         setTimeout(() => {
             fetch("http://localhost:8000/discussions", {

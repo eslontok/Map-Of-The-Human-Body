@@ -7,7 +7,7 @@
       "body": "Unfortunately, I punctured my achilles last week after I recklessly bumped into a ladder with drill bits (ouch!). I was scared that I may have torn it, so I went to see my doctor. I was so relieved when she told me that nothing was lodged in my foot, and that I only had achilles tendonitis. Hopefully, I can go back to running and parkour in a few months (fingers crossed!).",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "1",
@@ -16,7 +16,7 @@
       "body": "I always wondered why my tonsils (located towards the back of the throat) got swollen whenever I caught a cold. I recently discovered that tonsils are lymph nodes! Because pathogens often enter the lymphatic system, our bodies send cells (like white blood cells) to lymph nodes to essentially \"ambush\" the invading pathogens. Isn't that so cool?!?! Go my army of lymphocytes!",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "2",
@@ -25,7 +25,7 @@
       "body": "Everyone knows that erythrocytes (red blood cells) are red (hence, their name), but what exactly gives them their red color? I've been searching frantically for an answer, but the answers online are so confusing. I would greatly appreciate it if someone can simplify it for me.",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "ea86",
@@ -34,7 +34,7 @@
       "body": "Random content by random author 1",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "7e74",
@@ -43,7 +43,7 @@
       "body": "Random content by random author 2",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "4451",
@@ -52,7 +52,7 @@
       "body": "This body was modified using the PATCH request method :)",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "5da4",
@@ -61,16 +61,16 @@
       "body": "Random content by random author 10",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "comments": []
     },
     {
       "id": "42cb",
       "title": "Random Discussion 5 - bugfix check 1",
       "author": "Random Author 5 - bugfix check 2",
-      "body": "After some bugfixes, hopefully, this works :/\nTyped link directly - hopefully this works too :/\nI will edit this discussion one more time",
+      "body": "After some bugfixes, hopefully, this works :/\nTyped link directly - hopefully this works too :/\nI will edit this discussion one more time\nThis is my last edit :(",
       "likes": 0,
       "dislikes": 0,
-      "replies": [
+      "comments": [
         {
           "author": "Test Reply 1",
           "body": "I am replying to this discussion post for the FIRST time :)",
@@ -80,6 +80,12 @@
         {
           "author": "Test Reply 2",
           "body": "I am replying to this discussion post for the SECOND time :/",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "author": "Test Reply 3",
+          "body": "This will probably be my last reply to this discussion post :(",
           "likes": 0,
           "dislikes": 0
         }
