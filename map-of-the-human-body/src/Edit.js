@@ -30,7 +30,7 @@ function Edit(){
                 })
             }).then(() => {
                 setIsUploading(false);
-                navigate("/discussions");
+                navigate("/discussions/" + id);
             });
         }, 500);
     }

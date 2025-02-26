@@ -67,10 +67,23 @@
       "id": "42cb",
       "title": "Random Discussion 5 - bugfix check 1",
       "author": "Random Author 5 - bugfix check 2",
-      "body": "After some bugfixes, hopefully, this works :/\nTyped link directly - hopefully this works too :/",
+      "body": "After some bugfixes, hopefully, this works :/\nTyped link directly - hopefully this works too :/\nI will edit this discussion one more time",
       "likes": 0,
       "dislikes": 0,
-      "replies": []
+      "replies": [
+        {
+          "author": "Test Reply 1",
+          "body": "I am replying to this discussion post for the FIRST time :)",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "author": "Test Reply 2",
+          "body": "I am replying to this discussion post for the SECOND time :/",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
     }
   ]
 }
