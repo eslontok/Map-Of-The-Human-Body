@@ -28,71 +28,13 @@
       "comments": []
     },
     {
-      "id": "ea86",
-      "title": "Random Discussion 1",
-      "author": "Random Author 1",
-      "body": "Random content by random author 1",
+      "id": "8343",
+      "title": "New Discussion 1",
+      "author": "New Author 1",
+      "body": "New Content 1 - this is to test whether the id automatically assigned by the JSON server is an integer or a string",
       "likes": 0,
       "dislikes": 0,
       "comments": []
-    },
-    {
-      "id": "7e74",
-      "title": "Random Discussion 2",
-      "author": "Random Author 2",
-      "body": "Random content by random author 2",
-      "likes": 0,
-      "dislikes": 0,
-      "comments": []
-    },
-    {
-      "id": "4451",
-      "title": "Random Discussion 4",
-      "author": "Random Author 4",
-      "body": "This body was modified using the PATCH request method :)",
-      "likes": 0,
-      "dislikes": 0,
-      "comments": []
-    },
-    {
-      "id": "5da4",
-      "title": "Random Discussion 10",
-      "author": "Random Author 10",
-      "body": "Random content by random author 10",
-      "likes": 0,
-      "dislikes": 0,
-      "comments": []
-    },
-    {
-      "id": "42cb",
-      "title": "Random Discussion 5 - bugfix check 1",
-      "author": "Random Author 5 - bugfix check 2",
-      "body": "After some bugfixes, hopefully, this works :/\nTyped link directly - hopefully this works too :/\nI will edit this discussion one more time",
-      "likes": 0,
-      "dislikes": 0,
-      "comments": [
-        {
-          "commentId": 0,
-          "author": "comment 1",
-          "body": "testing - comment 1",
-          "likes": 0,
-          "dislikes": 0
-        },
-        {
-          "commentId": 1,
-          "author": "comment 2",
-          "body": "test - comment 2",
-          "likes": 0,
-          "dislikes": 0
-        },
-        {
-          "commentId": 2,
-          "author": "comment 3",
-          "body": "test - comment 3",
-          "likes": 0,
-          "dislikes": 0
-        }
-      ]
     }
   ]
 }
