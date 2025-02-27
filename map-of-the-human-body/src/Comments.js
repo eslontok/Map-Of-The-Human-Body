@@ -15,9 +15,21 @@ function Comments(){
     const [isUploading, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
+    const genId = () => {
+        let newCommentId = -1;
+        for(let i = 0; i < discussion.comments.length; i++){
+            const comment = discussion.comments[i];
+            if(comment.commentId > newCommentId){
+                newCommentId = comment.commentId;
+            }
+        }
+        return newCommentId + 1;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        const comment = {author, body, likes, dislikes};
+        const commentId = genId();
+        const comment = {commentId, author, body, likes, dislikes};
         const newComments = [...discussion.comments];
         newComments.push(comment);
         setIsUploading(true);
