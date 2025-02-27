@@ -179,9 +179,35 @@
   cursor: pointer;
 }
 
-/* COMMENT LIST */
+/* COMMENTS LIST */
 
-
+.commentsList {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.commentPreview {
+  padding: 5px 5px;
+  margin-bottom: 15px;
+}
+.commentPreview:hover {
+  box-shadow: 5px 5px 15px #36454F;
+}
+.commentPreview h4 {
+  color: #FFFFFF;
+}
+.commentPreview p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.commentPreview span {
+  font-size: 16px;
+  color: #FFFFFF;
+  background: #353935;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-bottom: 2px;
+  margin-right: 5px;
+}
 
 /* EDIT */
 

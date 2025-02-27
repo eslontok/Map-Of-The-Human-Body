@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
+import CommentsList from "./CommentsList";
 import useFetch from "./useFetch";
 import map from "./LikeDislikeMap";
 
@@ -120,6 +121,7 @@ function DiscussionDetails(){
                     </div>
                 </article>
             )}
+            {discussion && <CommentsList comments={discussion.comments}/>}
         </div>
     );
 }
