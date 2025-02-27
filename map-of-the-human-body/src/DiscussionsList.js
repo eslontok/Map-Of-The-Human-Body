@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import map from "./LikeDislikeMap";
+import map from "./DiscussionsLikeDislikeMap";
 
 function DiscussionsList(props){
 
