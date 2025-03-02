@@ -95,6 +95,20 @@ function CommentsList(props){
         updateLikeDislike(commentId, like, dislike);
     }
 
+    const handleDelete = (commentId) => {
+        const newComments = comments.filter(comment => comment.commentId !== commentId);
+        const newDiscussion = {...discussion};
+        newDiscussion.comments = newComments;
+        fetch("http://localhost:8000/discussions/" + id, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                comments: newComments
+            })
+        });
+        setDiscussion(newDiscussion);
+    }
+
     return(
         <div className="commentsList">
             {comments.map((comment) => (
@@ -122,6 +136,9 @@ function CommentsList(props){
                             && <span className="material-symbols-outlined">thumb_down</span>
                         }
                         {comment.dislikes}
+                    </button>
+                    <button onClick={() => handleDelete(comment.commentId)} style={{float: "right"}}>
+                        <span className="material-symbols-outlined" style={{margin: "0px", color: "#D2042D"}}>delete</span>
                     </button>
                 </div>
             ))}
