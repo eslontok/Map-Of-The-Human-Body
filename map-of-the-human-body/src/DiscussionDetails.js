@@ -121,7 +121,7 @@ function DiscussionDetails(){
                     </div>
                 </article>
             )}
-            {discussion && <CommentsList comments={discussion.comments}/>}
+            {discussion && <CommentsList discussion={discussion} setDiscussion={setDiscussion}/>}
         </div>
     );
 }
