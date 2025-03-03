@@ -5,8 +5,8 @@
       "title": "I Punctured My Achilles",
       "author": "Podi Tend",
       "body": "Unfortunately, I punctured my achilles last week after I recklessly bumped into a ladder with drill bits (ouch!). I was scared that I may have torn it, so I went to see my doctor. I was so relieved when she told me that nothing was lodged in my foot, and that I only had achilles tendonitis. Hopefully, I can go back to running and parkour in a few months (fingers crossed!).",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 5,
+      "dislikes": 1,
       "comments": []
     },
     {
@@ -14,8 +14,8 @@
       "title": "My Tonsils Become Swollen When I Get Sick",
       "author": "Cervi Itis",
       "body": "I always wondered why my tonsils (located towards the back of the throat) got swollen whenever I caught a cold. I recently discovered that tonsils are lymph nodes! Because pathogens often enter the lymphatic system, our bodies send cells (like white blood cells) to lymph nodes to essentially \"ambush\" the invading pathogens. Isn't that so cool?!?! Go my army of lymphocytes!",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 8,
+      "dislikes": 3,
       "comments": []
     },
     {
@@ -23,8 +23,8 @@
       "title": "Why Are Red Blood Cells Red?",
       "author": "Rouge Cyte",
       "body": "Everyone knows that erythrocytes (red blood cells) are red (hence, their name), but what exactly gives them their red color? I've been searching frantically for an answer, but the answers online are so confusing. I would greatly appreciate it if someone can simplify it for me.",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 12,
+      "dislikes": 1,
       "comments": []
     },
     {
@@ -32,8 +32,8 @@
       "title": "New Discussion 1",
       "author": "New Author 1",
       "body": "New Content 1 - this is to test whether the id automatically assigned by the JSON server is an integer or a string",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 5,
+      "dislikes": 8,
       "comments": [
         {
           "commentId": 0,

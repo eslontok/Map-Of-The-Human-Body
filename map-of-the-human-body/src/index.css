@@ -57,13 +57,25 @@
 }
 .discussions h2 {
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .discussions button {
   color: #FFFFFF;
   background: #353935;
   border-radius: 16px;
   font-weight: bold;
+  cursor: pointer;
+}
+.discussions label {
+  display: inline-block;
+  color: #FFFFFF;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+.discussions select {
+  padding: 2px;
+  border: 1px solid #FFFFFF;
+  border-radius: 16px;
   cursor: pointer;
 }
 
