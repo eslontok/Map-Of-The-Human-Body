@@ -46,8 +46,50 @@
 
 /* HOME */
 
+.home {
+  margin: 0 auto;
+  text-align: center;
+
+}
 .home h2 {
   color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+/* MAP */
+
+.map {
+  margin: 0 auto;
+  text-align: center;
+
+}
+.map h2 {
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+/* SYSTEMS */
+
+.systems {
+  margin: 0 auto;
+  text-align: center;
+
+}
+.systems h2 {
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+/* DISEASES */
+
+.diseases {
+  margin: 0 auto;
+  text-align: center;
+
+}
+.diseases h2 {
+  color: #FFFFFF;
+  margin-bottom: 5px;
 }
 
 /* DISCUSSIONS */
