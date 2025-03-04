@@ -106,6 +106,11 @@ function CommentsList(props){
                 comments: newComments
             })
         });
+        if(map.has(id) && map.get(id).has(commentId)){
+            const commentsMap = map.get(id);
+            commentsMap.delete(commentId);
+            map.set(id, commentsMap);
+        }
         setDiscussion(newDiscussion);
     }
 
