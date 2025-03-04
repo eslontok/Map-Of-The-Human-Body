@@ -145,6 +145,19 @@
 .discussionButtons button {
   width: 100px;
 }
+.discussionDetails label {
+  display: inline-block;
+  color: #FFFFFF;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.discussionDetails select {
+  padding: 2px;
+  border: 1px solid #FFFFFF;
+  border-radius: 16px;
+  cursor: pointer;
+}
 
 /* COMMENTS */
 
@@ -194,7 +207,6 @@
 /* COMMENTS LIST */
 
 .commentsList {
-  margin-top: 15px;
   margin-left: 15px;
 }
 .commentPreview {

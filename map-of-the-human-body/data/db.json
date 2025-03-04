@@ -39,22 +39,22 @@
           "commentId": 0,
           "author": "Comment 1",
           "body": "Testing - Comment 1",
-          "likes": 0,
-          "dislikes": 0
+          "likes": 10,
+          "dislikes": 2
         },
         {
           "commentId": 1,
           "author": "Comment 2",
           "body": "Testing - Comment 2",
-          "likes": 0,
+          "likes": 20,
           "dislikes": 0
         },
         {
           "commentId": 2,
           "author": "Comment 3",
           "body": "Testing - Comment 3",
-          "likes": 0,
-          "dislikes": 0
+          "likes": 5,
+          "dislikes": 10
         }
       ]
     }

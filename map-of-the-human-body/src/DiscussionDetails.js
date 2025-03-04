@@ -12,6 +12,8 @@ function DiscussionDetails(){
     const [isDeleting, setIsDeleting] = useState(false);
     const navigate = useNavigate();
 
+    const [selection, setSelection] = useState("-");
+
     const updateLikeDislike = (id, like, dislike) => {
         const newDiscussion = {...discussion};
         newDiscussion.likes += like;
@@ -87,6 +89,46 @@ function DiscussionDetails(){
         }, 500);
     }
 
+    //discussions array is iterated left to right and rendered top to bottom
+    //therefore, an ascending array is rendered in ascending order top to bottom
+    //goal: highest rating should be top to bottom - invert 1 and -1 when comparing
+    const compareAsc = (com1, com2) => {
+        const rateDiff1 = com1.likes - com1.dislikes;
+        const rateDiff2 = com2.likes - com2.dislikes;
+        if(rateDiff1 < rateDiff2){
+            return 1;
+        }
+        if(rateDiff1 > rateDiff2){
+            return -1;
+        }
+        return 0;
+    }
+
+    //discussions array is iterated left to right and rendered top to bottom
+    //therefore, a descending array is rendered in descending order top to bottom
+    //goal: lowest rating should be top to bottom - invert 1 and -1 when comparing
+    const compareDesc = (com1, com2) => {
+        const rateDiff1 = com1.likes - com1.dislikes;
+        const rateDiff2 = com2.likes - com2.dislikes;
+        if(rateDiff1 < rateDiff2){
+            return -1;
+        }
+        if(rateDiff1 > rateDiff2){
+            return 1;
+        }
+        return 0;
+    }
+
+    const handleChange = (e) => {
+        const comments = discussion.comments;
+        if(e.target.value === "Highest Rating"){
+            comments.sort(compareAsc);
+        }else if(e.target.value === "Lowest Rating"){
+            comments.sort(compareDesc);
+        }
+        setSelection(e.target.value);
+    }
+
     return(
         <div className="discussionDetails">
             {error && <div style={{color: "#D2042D"}}>{error}</div>}
@@ -121,6 +163,16 @@ function DiscussionDetails(){
                     </div>
                 </article>
             )}
+            {discussion &&
+                <div>
+                    <label>Sort By:</label>
+                    <select value={selection} onChange={(e) => handleChange(e)}>
+                        <option value="-">-</option>
+                        <option value="Highest Rating">Highest Rating</option>
+                        <option value="Lowest Rating">Lowest Rating</option>
+                    </select>
+                </div>
+            }
             {discussion && <CommentsList discussion={discussion} setDiscussion={setDiscussion}/>}
         </div>
     );

@@ -73,16 +73,18 @@ function Discussions(){
             <Link to="/discussions/create">
                 <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
             </Link>
-            <div>
-                <label>Sort By:</label>
-                <select value={selection} onChange={(e) => handleChange(e)}>
-                    <option value="-">-</option>
-                    <option value="Highest Rating">Highest Rating</option>
-                    <option value="Lowest Rating">Lowest Rating</option>
-                </select>
-            </div>
             {error && <div style={{color: "#D2042D"}}>{error}</div>}
             {isLoading && <div>Loading discussions...</div>}
+            {discussions &&
+                <div>
+                    <label>Sort By:</label>
+                    <select value={selection} onChange={(e) => handleChange(e)}>
+                        <option value="-">-</option>
+                        <option value="Highest Rating">Highest Rating</option>
+                        <option value="Lowest Rating">Lowest Rating</option>
+                    </select>
+                </div>
+            }
             {discussions && <DiscussionsList discussions={discussions} updateLikeDislike={updateLikeDislike}/>}
         </div>
     );
