@@ -1,0 +1,10 @@
+/* HOME */
+
+.home {
+    margin: 0 auto;
+    text-align: center;
+}
+.home h2 {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}

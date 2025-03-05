@@ -1,0 +1,47 @@
+/* DISCUSSION DETAILS */
+
+.discussionDetails h2 {
+    color: #FFFFFF;
+}
+.discussionDetails h3 {
+    color: #FFFFFF;
+}
+.discussionDetails p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.discussionDetails button {
+    color: #FFFFFF;
+    background: #353935;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.discussionDetails span {
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #353935;
+    font-weight: bold;
+    vertical-align: middle;
+    padding-bottom: 2px;
+    margin-right: 5px;
+}
+.discussionButtons {
+    float: right;
+}
+.discussionButtons button {
+    width: 100px;
+}
+.discussionDetails label {
+    display: inline-block;
+    color: #FFFFFF;
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.discussionDetails select {
+    padding: 2px;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+}

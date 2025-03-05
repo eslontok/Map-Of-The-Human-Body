@@ -1,0 +1,31 @@
+/* DISCUSSIONS LIST */
+
+.discussionPreview {
+    padding: 5px 5px;
+    margin-bottom: 15px;
+}
+.discussionPreview:hover {
+    box-shadow: 5px 5px 15px #36454F;
+}
+.discussionPreview h3 {
+    color: #FFFFFF;
+}
+.discussionPreview h4 {
+    color: #FFFFFF;
+}
+.discussionPreview p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.discussionPreview span {
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #353935;
+    font-weight: bold;
+    vertical-align: middle;
+    padding-bottom: 2px;
+    margin-right: 5px;
+}
+.discussionPreview a {
+    text-decoration: none;
+}
