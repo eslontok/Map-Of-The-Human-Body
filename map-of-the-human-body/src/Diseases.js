@@ -1,3 +1,5 @@
+import "./css/diseases.css";
+
 function Diseases(){
     return(
         <div className="diseases">

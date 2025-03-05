@@ -1,3 +1,4 @@
+import "./css/master.css";
 import Navbar from './Navbar';
 import Home from './Home';
 import Map from './Map';

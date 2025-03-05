@@ -1,3 +1,4 @@
+import "./css/comments.css";
 import {useState} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import useFetch from "./useFetch";

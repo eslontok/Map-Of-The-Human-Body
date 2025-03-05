@@ -1,3 +1,4 @@
+import "./css/discussionDetails.css";
 import {useState} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import CommentsList from "./CommentsList";

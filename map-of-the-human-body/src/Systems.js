@@ -1,3 +1,5 @@
+import "./css/systems.css";
+
 function Systems(){
     return(
         <div className="systems">

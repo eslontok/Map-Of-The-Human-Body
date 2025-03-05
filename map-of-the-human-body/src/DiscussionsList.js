@@ -1,3 +1,4 @@
+import "./css/discussionsList.css";
 import {Link} from "react-router-dom";
 import map from "./DiscussionsLikeDislikeMap";
 

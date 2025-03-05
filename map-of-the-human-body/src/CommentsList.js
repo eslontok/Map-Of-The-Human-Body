@@ -1,3 +1,4 @@
+import "./css/commentsList.css";
 import map from "./CommentsLikeDislikeMap";
 
 function CommentsList(props){
