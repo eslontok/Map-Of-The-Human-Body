@@ -4,9 +4,12 @@ import Observer from "./Observer";
 function Home(){
 
     return(
-        <div className="home hide">
+        <div className="home">
             <Observer/>
-            <h2>Home Page</h2>
+            <div className="header">
+                <h2 className="hide">Map of the<br></br>Human Body</h2>
+                <button className="hide animate-stagger">Explore</button>
+            </div>
             <p>Coming Soon!</p>
         </div>
     );
