@@ -26,5 +26,5 @@
     opacity: 0;
 }
 .show {
-    animation: slideIn 2s ease both;
+    animation: slideIn 1s ease both;
 }
