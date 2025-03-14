@@ -1,5 +1,10 @@
 /* COMMENTS */
 
+.comments {
+    margin: 0 auto;
+    max-width: 70em;
+    padding: 2em;
+}
 .comments h2 {
     color: #FFFFFF;
 }

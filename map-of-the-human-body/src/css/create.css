@@ -3,6 +3,7 @@
 .create {
     max-width: 500px;
     margin: 0 auto;
+    padding: 1em;
     text-align: center;
 }
 .create h2 {
