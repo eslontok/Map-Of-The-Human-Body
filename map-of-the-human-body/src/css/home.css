@@ -4,21 +4,74 @@
     margin: 0 auto;
     text-align: center;
 }
-.home h2 {
+.header {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    display: inline-block;
+    align-content: center;
+}
+.header::before {
+    content: "";
+    background-image: url("images/brain.jpg");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.header h2 {
+    background: none;
+    position: relative;
+    font-size: 3em;
     color: #FFFFFF;
-    margin-bottom: 5px;
+    text-align: left;
+    margin: 20px;
+}
+.header button {
+    position: relative;
+    display: block;
+    border-radius: 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+    width: 8em;
+    padding: 5px;
+    margin: 20px;
+}
+.header button:hover {
+    outline: 3px solid #FFFFFF;
+    cursor: pointer;
+}
+.body {
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 2em;
+}
+.body h1 {
+    color: #FFFFFF;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.body p {
+    font-size: 1.2em;
+    text-align: left;
 }
 
 /* ANIMATIONS */
 
+.show.animate-stagger {
+    animation-delay: 0.1s;
+}
+
 @keyframes slideIn {
     from{
         opacity: 0;
-        transform: translateX(20%);
+        transform: translateX(400px);
     }
     to{
         opacity: 1;
-        transform: translateX(0%);
+        transform: translateX(0);
     }
 }
 
@@ -26,5 +79,5 @@
     opacity: 0;
 }
 .show {
-    animation: slideIn 1s ease both;
+    animation: slideIn 1.5s ease both;
 }
