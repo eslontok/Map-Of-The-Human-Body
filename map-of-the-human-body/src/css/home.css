@@ -33,14 +33,14 @@
     position: relative;
     display: block;
     border-radius: 20px;
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: bold;
     width: 8em;
     padding: 5px;
     margin: 20px;
 }
 .header button:hover {
-    outline: 3px solid #FFFFFF;
+    outline: 3px solid #00FFFF;
     cursor: pointer;
 }
 .body {
@@ -57,11 +57,29 @@
     font-size: 1.2em;
     text-align: left;
 }
+.body button {
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+    padding: 1em;
+    margin: 4em;
+}
+.body button:hover {
+    outline: 3px solid #00FFFF;
+    cursor: pointer;
+}
+.body img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 /* ANIMATIONS */
 
-.show.animate-stagger {
+.show.animate-stagger-short {
     animation-delay: 0.1s;
+}
+.show.animate-stagger-long {
+    animation-delay: 0.2s;
 }
 
 @keyframes slideIn {
