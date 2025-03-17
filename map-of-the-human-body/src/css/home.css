@@ -1,6 +1,9 @@
 /* HOME */
 
 .home {
+    background: #28282B;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0 auto;
     text-align: center;
 }
@@ -30,6 +33,7 @@
     margin: 20px;
 }
 .header button {
+    background-color: #393539;
     position: relative;
     display: block;
     border-radius: 20px;
@@ -62,6 +66,7 @@
     justify-content: center;
 }
 .options button {
+    background-color: #393539;
     width: 10em;
     height: 10em;
     border-radius: 20px;

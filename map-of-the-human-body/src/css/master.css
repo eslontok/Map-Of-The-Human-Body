@@ -4,7 +4,6 @@
 /* EVERYTHING */
 
 * {
-    background-color: #28282B;
     margin: 0;
     font-family: "Quicksand";
     color: #00FFFF;
@@ -13,6 +12,7 @@
 /* NAVBAR */
   
 .navbar {
+    background-color: #28282B;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -37,9 +37,5 @@
 /* CONTENT */
   
 .content {
-    /*
-    margin: 0 auto;
-    padding: 20px;
-    */
     overflow: hidden;
 }

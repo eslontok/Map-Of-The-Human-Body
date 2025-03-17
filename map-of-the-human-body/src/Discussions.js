@@ -69,24 +69,26 @@ function Discussions(){
     }
 
     return(
-        <div className="discussions">
-            <h2>Discussions</h2>
-            <Link to="/discussions/create">
-                <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
-            </Link>
-            {error && <div style={{color: "#D2042D"}}>{error}</div>}
-            {isLoading && <div>Loading discussions...</div>}
-            {discussions &&
-                <div>
-                    <label>Sort By:</label>
-                    <select value={selection} onChange={(e) => handleChange(e)}>
-                        <option value="-">-</option>
-                        <option value="Highest Rating">Highest Rating</option>
-                        <option value="Lowest Rating">Lowest Rating</option>
-                    </select>
-                </div>
-            }
-            {discussions && <DiscussionsList discussions={discussions} updateLikeDislike={updateLikeDislike}/>}
+        <div className="scene">
+            <div className="discussions">
+                <h2>Discussions</h2>
+                <Link to="/discussions/create">
+                    <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>
+                </Link>
+                {error && <div style={{color: "#D2042D"}}>{error}</div>}
+                {isLoading && <div>Loading discussions...</div>}
+                {discussions &&
+                    <div>
+                        <label>Sort By:</label>
+                        <select value={selection} onChange={(e) => handleChange(e)}>
+                            <option value="-">-</option>
+                            <option value="Highest Rating">Highest Rating</option>
+                            <option value="Lowest Rating">Lowest Rating</option>
+                        </select>
+                    </div>
+                }
+                {discussions && <DiscussionsList discussions={discussions} updateLikeDislike={updateLikeDislike}/>}
+            </div>
         </div>
     );
 }

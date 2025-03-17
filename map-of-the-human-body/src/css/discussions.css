@@ -1,5 +1,12 @@
 /* DISCUSSIONS */
 
+.scene {
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+}
 .discussions {
     margin: 0 auto;
     max-width: 70em;
@@ -17,6 +24,9 @@
     background: #353935;
     border-radius: 16px;
     font-weight: bold;
+}
+.discussions button:hover {
+    outline: 2px solid #FFFFFF;
     cursor: pointer;
 }
 .discussions label {
@@ -26,8 +36,12 @@
     margin-bottom: 15px;
 }
 .discussions select {
+    background: none;
     padding: 2px;
     border: 1px solid #FFFFFF;
     border-radius: 16px;
     cursor: pointer;
+}
+.discussions option {
+    background: #28282B;
 }
