@@ -65,21 +65,23 @@ function Edit(){
     }, [id]);
 
     return(
-        <div className="edit">
-            <h2>Edit Discussion</h2>
-            {error && <div style={{color: "#D2042D"}}>{error}</div>}
-            {isLoading && <div>Loading discussion...</div>}
-            {discussion && (
-                <form onSubmit={handleSubmit}>
-                    <label>Title:</label>
-                    <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)}/>
-                    <label>Author:</label>
-                    <input type="text" required value={author} onChange={(e) => setAuthor(e.target.value)}/>
-                    <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
-                    {!isUploading && <button>Upload</button>}
-                    {isUploading && <button disabled>Uploading...</button>}
-                </form>
-            )}
+        <div className="scene">
+            <div className="edit">
+                <h2>Edit Discussion</h2>
+                {error && <div style={{color: "#D2042D"}}>{error}</div>}
+                {isLoading && <div>Loading discussion...</div>}
+                {discussion && (
+                    <form onSubmit={handleSubmit}>
+                        <label>Title:</label>
+                        <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)}/>
+                        <label>Author:</label>
+                        <input type="text" required value={author} onChange={(e) => setAuthor(e.target.value)}/>
+                        <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+                        {!isUploading && <button>Upload</button>}
+                        {isUploading && <button disabled>Uploading...</button>}
+                    </form>
+                )}
+            </div>
         </div>
     );
 }

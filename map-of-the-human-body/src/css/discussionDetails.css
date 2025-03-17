@@ -1,8 +1,15 @@
 /* DISCUSSION DETAILS */
 
+.scene {
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+}
 .discussionDetails {
-    margin: 0 auto;
     max-width: 70em;
+    margin: 0 auto;
     padding: 2em;
 }
 .discussionDetails h2 {
@@ -20,6 +27,9 @@
     background: #353935;
     border-radius: 16px;
     font-weight: bold;
+}
+.discussionDetails button:hover {
+    outline: 2px solid #FFFFFF;
     cursor: pointer;
 }
 .discussionDetails span {
@@ -45,8 +55,12 @@
     margin-bottom: 15px;
 }
 .discussionDetails select {
+    background: none;
     padding: 2px;
     border: 1px solid #FFFFFF;
     border-radius: 16px;
     cursor: pointer;
+}
+.discussionDetails option {
+    background: #28282B;
 }

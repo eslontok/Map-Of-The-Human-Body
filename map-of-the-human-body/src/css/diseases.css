@@ -1,6 +1,9 @@
 /* DISEASES */
 
 .diseases {
+    background: #28282B;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0 auto;
     text-align: center;
 }

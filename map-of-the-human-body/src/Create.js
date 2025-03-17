@@ -32,17 +32,19 @@ function Create(){
     }
 
     return(
-        <div className="create">
-            <h2>Create a New Discussion</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Title:</label>
-                <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)}/>
-                <label>Author:</label>
-                <input type="text" required value={author} onChange={(e) => setAuthor(e.target.value)}/>
-                <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
-                {!isUploading && <button>Upload</button>}
-                {isUploading && <button disabled>Uploading...</button>}
-            </form>
+        <div className="scene">
+            <div className="create">
+                <h2>Create a New Discussion</h2>
+                <form onSubmit={handleSubmit}>
+                    <label>Title:</label>
+                    <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)}/>
+                    <label>Author:</label>
+                    <input type="text" required value={author} onChange={(e) => setAuthor(e.target.value)}/>
+                    <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+                    {!isUploading && <button>Upload</button>}
+                    {isUploading && <button disabled>Uploading...</button>}
+                </form>
+            </div>
         </div>
     );
 }

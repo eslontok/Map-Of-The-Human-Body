@@ -1,8 +1,15 @@
 /* COMMENTS */
 
+.scene {
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+}
 .comments {
-    margin: 0 auto;
     max-width: 70em;
+    margin: 0 auto;
     padding: 2em;
 }
 .comments h2 {
@@ -26,11 +33,13 @@
     margin-bottom: 20px;
 }
 .comments input {
+    background: #28282B;
     width: 400px;
     padding: 5px;
     border: 1px solid #FFFFFF;
 }
 .comments textarea {
+    background: #28282B;
     width: 100%;
     height: 100px;
     padding: 5px;
@@ -45,5 +54,8 @@
     border-radius: 16px;
     font-weight: bold;
     padding: 5px;
+}
+.comments button:hover {
+    outline: 2px solid #FFFFFF;
     cursor: pointer;
 }

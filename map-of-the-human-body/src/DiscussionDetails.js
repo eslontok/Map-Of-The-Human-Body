@@ -131,50 +131,52 @@ function DiscussionDetails(){
     }
 
     return(
-        <div className="discussionDetails">
-            {error && <div style={{color: "#D2042D"}}>{error}</div>}
-            {isLoading && <div>Loading discussion...</div>}
-            {discussion && (
-                <article>
-                    <h2>{discussion.title}</h2>
-                    <h3>Posted by: {discussion.author}</h3>
-                    <p>{discussion.body}</p>
-                    <button onClick={() => handleLike(id)}>
-                        {(map.has(id) && map.get(id)[0] === true) && <span className="material-symbols-outlined" style={{color: "#00FFFF"}}>thumb_up</span>}
-                        {(!map.has(id) || map.get(id)[0] === false) && <span className="material-symbols-outlined">thumb_up</span>}
-                        {discussion.likes}
-                    </button>
-                    <button onClick={() => handleDislike(id)}>
-                        {(map.has(id) && map.get(id)[1] === true) && <span className="material-symbols-outlined" style={{color: "#00FFFF"}}>thumb_down</span>}
-                        {(!map.has(id) || map.get(id)[1] === false) && <span className="material-symbols-outlined">thumb_down</span>}
-                        {discussion.dislikes}
-                    </button>
-                    <Link to={`/discussions/${id}/comments`}>
-                        <button>
-                            <span className="material-symbols-outlined">mode_comment</span>
-                            {discussion.comments.length}
+        <div className="scene">
+            <div className="discussionDetails">
+                {error && <div style={{color: "#D2042D"}}>{error}</div>}
+                {isLoading && <div>Loading discussion...</div>}
+                {discussion && (
+                    <article>
+                        <h2>{discussion.title}</h2>
+                        <h3>Posted by: {discussion.author}</h3>
+                        <p>{discussion.body}</p>
+                        <button onClick={() => handleLike(id)}>
+                            {(map.has(id) && map.get(id)[0] === true) && <span className="material-symbols-outlined" style={{color: "#00FFFF"}}>thumb_up</span>}
+                            {(!map.has(id) || map.get(id)[0] === false) && <span className="material-symbols-outlined">thumb_up</span>}
+                            {discussion.likes}
                         </button>
-                    </Link>
-                    <div className="discussionButtons">
-                        <Link to={`/discussions/${id}/edit`}>
-                            <button>Edit</button>
+                        <button onClick={() => handleDislike(id)}>
+                            {(map.has(id) && map.get(id)[1] === true) && <span className="material-symbols-outlined" style={{color: "#00FFFF"}}>thumb_down</span>}
+                            {(!map.has(id) || map.get(id)[1] === false) && <span className="material-symbols-outlined">thumb_down</span>}
+                            {discussion.dislikes}
+                        </button>
+                        <Link to={`/discussions/${id}/comments`}>
+                            <button>
+                                <span className="material-symbols-outlined">mode_comment</span>
+                                {discussion.comments.length}
+                            </button>
                         </Link>
-                        {!isDeleting && <button onClick={handleDelete}>Delete</button>}
-                        {isDeleting && <button disabled>Deleting...</button>}
+                        <div className="discussionButtons">
+                            <Link to={`/discussions/${id}/edit`}>
+                                <button>Edit</button>
+                            </Link>
+                            {!isDeleting && <button onClick={handleDelete}>Delete</button>}
+                            {isDeleting && <button disabled>Deleting...</button>}
+                        </div>
+                    </article>
+                )}
+                {discussion &&
+                    <div>
+                        <label>Sort By:</label>
+                        <select value={selection} onChange={(e) => handleChange(e)}>
+                            <option value="-">-</option>
+                            <option value="Highest Rating">Highest Rating</option>
+                            <option value="Lowest Rating">Lowest Rating</option>
+                        </select>
                     </div>
-                </article>
-            )}
-            {discussion &&
-                <div>
-                    <label>Sort By:</label>
-                    <select value={selection} onChange={(e) => handleChange(e)}>
-                        <option value="-">-</option>
-                        <option value="Highest Rating">Highest Rating</option>
-                        <option value="Lowest Rating">Lowest Rating</option>
-                    </select>
-                </div>
-            }
-            {discussion && <CommentsList discussion={discussion} setDiscussion={setDiscussion}/>}
+                }
+                {discussion && <CommentsList discussion={discussion} setDiscussion={setDiscussion}/>}
+            </div>
         </div>
     );
 }

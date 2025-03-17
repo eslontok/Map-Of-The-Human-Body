@@ -8,8 +8,8 @@
     min-height: 100vh;
 }
 .discussions {
-    margin: 0 auto;
     max-width: 70em;
+    margin: 0 auto;
     padding: 2em;
 }
 .discussions h2, button {
