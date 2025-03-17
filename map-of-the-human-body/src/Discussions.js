@@ -3,6 +3,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import DiscussionsList from "./DiscussionsList";
 import useFetch from "./useFetch";
+import ScrollToTop from "./ScrollToTop";
 
 function Discussions(){
 
@@ -71,6 +72,7 @@ function Discussions(){
     return(
         <div className="scene">
             <div className="discussions">
+                <ScrollToTop/>
                 <h2>Discussions</h2>
                 <Link to="/discussions/create">
                     <button style={{float: "right", fontSize: "20px"}}>+ New Discussion</button>

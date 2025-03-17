@@ -1,6 +1,7 @@
 import "./css/create.css";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 function Create(){
 
@@ -34,6 +35,7 @@ function Create(){
     return(
         <div className="scene">
             <div className="create">
+                <ScrollToTop/>
                 <h2>Create a New Discussion</h2>
                 <form onSubmit={handleSubmit}>
                     <label>Title:</label>

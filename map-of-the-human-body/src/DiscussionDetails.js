@@ -4,6 +4,7 @@ import {useParams, useNavigate, Link} from "react-router-dom";
 import CommentsList from "./CommentsList";
 import useFetch from "./useFetch";
 import map from "./DiscussionsLikeDislikeMap";
+import ScrollToTop from "./ScrollToTop";
 
 function DiscussionDetails(){
 
@@ -133,6 +134,7 @@ function DiscussionDetails(){
     return(
         <div className="scene">
             <div className="discussionDetails">
+                <ScrollToTop/>
                 {error && <div style={{color: "#D2042D"}}>{error}</div>}
                 {isLoading && <div>Loading discussion...</div>}
                 {discussion && (

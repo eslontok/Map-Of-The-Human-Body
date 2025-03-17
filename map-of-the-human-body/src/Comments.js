@@ -2,6 +2,7 @@ import "./css/comments.css";
 import {useState} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import useFetch from "./useFetch";
+import ScrollToTop from "./ScrollToTop";
 
 function Comments(){
 
@@ -51,6 +52,7 @@ function Comments(){
     return(
         <div className="scene">
             <div className="comments">
+                <ScrollToTop/>
                 {error && <div style={{color: "#D2042D"}}>{error}</div>}
                 {isLoading && <div>Loading discussion...</div>}
                 {discussion && (

@@ -5,6 +5,7 @@ import Observer from "./Observer";
 import body from "./css/images/body.png";
 import system from "./css/images/system.png";
 import disease from "./css/images/disease.png";
+import ScrollToTop from "./ScrollToTop";
 
 function Home(){
 
@@ -17,6 +18,7 @@ function Home(){
     return(
         <div className="home">
             <Observer/>
+            <ScrollToTop/>
             <div className="header">
                 <h2 className="hide">Map of the<br></br>Human Body</h2>
                 <button className="hide animate-stagger-long" onClick={handleExplore}>Explore</button>

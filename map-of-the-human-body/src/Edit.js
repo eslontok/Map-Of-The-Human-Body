@@ -1,6 +1,7 @@
 import "./css/edit.css";
 import {useState, useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 function Edit(){
 
@@ -67,6 +68,7 @@ function Edit(){
     return(
         <div className="scene">
             <div className="edit">
+                <ScrollToTop/>
                 <h2>Edit Discussion</h2>
                 {error && <div style={{color: "#D2042D"}}>{error}</div>}
                 {isLoading && <div>Loading discussion...</div>}
