@@ -1,6 +1,6 @@
 /* CREATE */
 
-.scene {
+.createScene {
     background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
     background-size: 100% 100%;
     background-attachment: fixed;

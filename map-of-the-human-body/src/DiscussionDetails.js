@@ -132,7 +132,7 @@ function DiscussionDetails(){
     }
 
     return(
-        <div className="scene">
+        <div className="discussionDetailsScene">
             <div className="discussionDetails">
                 <ScrollToTop/>
                 {error && <div style={{color: "#D2042D"}}>{error}</div>}

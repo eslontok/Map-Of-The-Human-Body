@@ -70,7 +70,7 @@ function Discussions(){
     }
 
     return(
-        <div className="scene">
+        <div className="discussionsScene">
             <div className="discussions">
                 <ScrollToTop/>
                 <h2>Discussions</h2>

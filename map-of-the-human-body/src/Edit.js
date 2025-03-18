@@ -66,7 +66,7 @@ function Edit(){
     }, [id]);
 
     return(
-        <div className="scene">
+        <div className="editScene">
             <div className="edit">
                 <ScrollToTop/>
                 <h2>Edit Discussion</h2>

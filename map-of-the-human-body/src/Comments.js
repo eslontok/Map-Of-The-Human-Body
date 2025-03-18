@@ -50,7 +50,7 @@ function Comments(){
     }
 
     return(
-        <div className="scene">
+        <div className="commentsScene">
             <div className="comments">
                 <ScrollToTop/>
                 {error && <div style={{color: "#D2042D"}}>{error}</div>}

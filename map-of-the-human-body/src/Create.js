@@ -33,7 +33,7 @@ function Create(){
     }
 
     return(
-        <div className="scene">
+        <div className="createScene">
             <div className="create">
                 <ScrollToTop/>
                 <h2>Create a New Discussion</h2>
