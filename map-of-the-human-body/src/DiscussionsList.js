@@ -1,6 +1,7 @@
 import "./css/discussionsList.css";
 import {Link} from "react-router-dom";
 import map from "./DiscussionsLikeDislikeMap";
+import Observer from "./Observer";
 
 function DiscussionsList(props){
 
@@ -57,8 +58,9 @@ function DiscussionsList(props){
 
     return(
         <div className="discussionsList">
+            <Observer/>
             {discussions.map((discussion) => (
-                <div className="discussionPreview" key={discussion.id}>
+                <div className="discussionPreview hide" key={discussion.id}>
                     <Link to={`/discussions/${discussion.id}`}>
                         <h3>{discussion.title}</h3>
                         <h4>Posted by: {discussion.author}</h4>

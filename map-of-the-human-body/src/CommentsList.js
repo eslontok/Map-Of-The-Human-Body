@@ -1,5 +1,6 @@
 import "./css/commentsList.css";
 import map from "./CommentsLikeDislikeMap";
+import Observer from "./Observer";
 
 function CommentsList(props){
 
@@ -117,8 +118,9 @@ function CommentsList(props){
 
     return(
         <div className="commentsList">
+            <Observer/>
             {comments.map((comment) => (
-                <div className="commentPreview" key={comment.commentId}>
+                <div className="commentPreview hide" key={comment.commentId}>
                     <h4>Commented by: {comment.author}</h4>
                     <p>{comment.body}</p>
                     <button onClick={() => handleLike(comment.commentId)}>
