@@ -4,57 +4,209 @@
       "id": "0",
       "title": "I Punctured My Achilles",
       "author": "Podi Tend",
-      "body": "Unfortunately, I punctured my achilles last week after I recklessly bumped into a ladder with drill bits (ouch!). I was scared that I may have torn it, so I went to see my doctor. I was so relieved when she told me that nothing was lodged in my foot, and that I only had achilles tendonitis. Hopefully, I can go back to running and parkour in a few months (fingers crossed!).",
-      "likes": 5,
-      "dislikes": 1,
-      "comments": []
+      "body": "Unfortunately, I punctured my achilles last week after I recklessly bumped into a ladder with drill bits set on top. The drill bits came crashing down and stabbed right into my right achilles tendon (ouch!). It bled and immediately swelled. I was scared that I may have torn it, so I went to see my podiatrist. I was so relieved when she told me that it wasn't torn and that nothing was lodged in my foot. I only had a more serious case of achilles tendonitis. Hopefully, I can go back to running and parkour in a few months (fingers crossed!).",
+      "likes": 31,
+      "dislikes": 5,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Athlen Runnee",
+          "body": "For someone who does parkour, you would think that the injury would be due to parkour, seeing how dangerous the activity is. Regardless, that's really unlucky. I hope you get better soon. I heard that stretching your achilles and doing calf raises (without feeling pain) is a great method of physical therapy.",
+          "likes": 5,
+          "dislikes": 1
+        },
+        {
+          "commentId": 1,
+          "author": "Considy Symph",
+          "body": "How terrible! Just the thought of something stabbing my achilles freaks me out. I hope you get better soon! I highly recommend that you incorporate light strength exercises once you no longer feel pain when walking. When I sprained my ankle, I remained idle throughout my entire recovery period (5 weeks). I easily experienced fatigue, particularly on my newly recovered leg. I should have listened to my doctor when she told me to engage in physical therapy. Otherwise, muscle and strength imbalances between your two legs may arise!",
+          "likes": 12,
+          "dislikes": 0
+        },
+        {
+          "commentId": 2,
+          "author": "Concery Citiz",
+          "body": "You should stop doing parkour entirely. Many people find them annoying, and they damage property. More importantly, it's dangerous. You're lucky your injury wasn't a result of parkour. Please stop for your own good - I've seen too many videos of people failing tricks and breaking both of their legs. It's not worth it.",
+          "likes": 8,
+          "dislikes": 7
+        },
+        {
+          "commentId": 3,
+          "author": "Jelly Envis",
+          "body": "You're probably not even good at parkour. Don't risk your own health for something you're not good at. No one cares (in person and online) whether or not you flip over a wall.",
+          "likes": 2,
+          "dislikes": 14
+        },
+        {
+          "commentId": 4,
+          "author": "Woody Axel",
+          "body": "Lumberjack here. 3 years ago, while I was chopping some logs, a large piece of bark launched straight toward my achilles. I immediately went to my podiatrist. Scans showed that my achilles was torn halfway. The swelling was so severe it looked like a tomato. Moral of the story: safety first. It took me 8 months to fully recover (I had some complications). Since yours was only punctured rather than torn, hopefully your recovery period will be much smoother and shorter than mine.",
+          "likes": 7,
+          "dislikes": 0
+        },
+        {
+          "commentId": 5,
+          "author": "Traceur Freeman",
+          "body": "Fellow parkour artist here. I'm so sorry to hear about your injury. I know you're probably itching to get back on the rails and walls haha. On a more serious note, please make sure you take your recovery period seriously and to get enough rest. Parkour is a high impact activity. If you rush it, your injuries will be back to square one. Source: I tore my ACL and tried doing parkour 3 months later (recovery time is 6 to 9 months). Needless to say, I spent 12 months recovering.",
+          "likes": 8,
+          "dislikes": 1
+        },
+        {
+          "commentId": 6,
+          "author": "Emploi Stafford",
+          "body": "I run a construction company, and I always tell my employees to prioritize their own and each other's safety. Oftentimes, shortcuts result in unsafe situations, which could lead to injury. You know what they say: the best ability is availability. Next time, make sure that all loose tools and materials (especially sharp objects) are placed on stable platforms.",
+          "likes": 4,
+          "dislikes": 0
+        }
+      ]
     },
     {
       "id": "1",
       "title": "My Tonsils Become Swollen When I Get Sick",
       "author": "Cervi Itis",
       "body": "I always wondered why my tonsils (located towards the back of the throat) got swollen whenever I caught a cold. I recently discovered that tonsils are lymph nodes! Because pathogens often enter the lymphatic system, our bodies send cells (like white blood cells) to lymph nodes to essentially \"ambush\" the invading pathogens. Isn't that so cool?!?! Go my army of lymphocytes!",
-      "likes": 8,
-      "dislikes": 3,
-      "comments": []
+      "likes": 10,
+      "dislikes": 2,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Sucrose Muchos",
+          "body": "My tonsils got really swollen when all I ate were cookies and chocolates (sorry, they tasted way too good). At first, I panicked thinking that I would have to halt my sugary journey indefinitely. I got sick 2 days later. After reading this post, I now see why my tonsils are swollen. Thank you for this insightful post. I shall continue munching on my Oreos.",
+          "likes": 3,
+          "dislikes": 0
+        }
+      ]
     },
     {
       "id": "2",
       "title": "Why Are Red Blood Cells Red?",
       "author": "Rouge Cyte",
       "body": "Everyone knows that erythrocytes (red blood cells) are red (hence, their name), but what exactly gives them their red color? I've been searching frantically for an answer, but the answers online are so confusing. I would greatly appreciate it if someone can simplify it for me.",
-      "likes": 12,
-      "dislikes": 1,
-      "comments": []
-    },
-    {
-      "id": "8343",
-      "title": "New Discussion 1",
-      "author": "New Author 1",
-      "body": "New Content 1 - this is to test whether the id automatically assigned by the JSON server is an integer or a string",
-      "likes": 5,
-      "dislikes": 8,
+      "likes": 57,
+      "dislikes": 3,
       "comments": [
         {
           "commentId": 0,
-          "author": "Comment 1",
-          "body": "Testing - Comment 1",
-          "likes": 10,
-          "dislikes": 2
+          "author": "Rose Fe",
+          "body": "A red blood cell (RBC) or erythrocyte has about 270 million proteins called hemoglobin. Each hemoglobin contains 4 heme groups that give the red blood cell its red color. Each heme group contains an iron atom - a single oxygen molecule can bind to this iron atom. Therefore, one hemoglobin can carry 4 oxygen molecules, and there are millions of hemoglobin in a single RBC. I know this part is unrelated to your question, but I just wanted to point out how efficient RBCs are!",
+          "likes": 24,
+          "dislikes": 1
         },
         {
           "commentId": 1,
-          "author": "Comment 2",
-          "body": "Testing - Comment 2",
-          "likes": 20,
+          "author": "Joy Comicy",
+          "body": "Because red is a cool color :)",
+          "likes": 2,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": "736d",
+      "title": "I Keep Getting Sick",
+      "author": "Illia Naus",
+      "body": "I don't understand why I keep getting sick. One day, I get sick and eventually, I get better. However, after one week, I get sick again! This has happened again and again over the past year, and I am so fed up with it! Please please please give me any advice on how to improve my immune system. As a father, I am unable to spend ample time with my family, as I'm afraid of getting them sick too...",
+      "likes": 19,
+      "dislikes": 0,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Citri Vits",
+          "body": "Maybe you lack Vitamin C. Vitamin C intake is actually one of the primary factors that contribute to immune system health. It enhances your immune cells' ability to \"eat\" invasive microbes (cells that \"eat\" are known as phagocytes). It is also an antioxidant. In an immune response, reactive oxygen species (ROS) are produced as byproducts - these unstable oxygen-containing molecules are highly reactive and can react with your healthy cells via oxidation, causing damage and disease. Vitamin C's antioxidative properties prevent this from happening. You can easily acquire Vitamin C by eating citrus fruits. Here, have an orange!",
+          "likes": 12,
           "dislikes": 0
         },
         {
-          "commentId": 2,
-          "author": "Comment 3",
-          "body": "Testing - Comment 3",
-          "likes": 5,
+          "commentId": 1,
+          "author": "Eepy Neko",
+          "body": "When I get sick, I recover pretty quickly. I believe this is due to the fact that I sleep 15 hours a day. Rest is important. When you're awake, your body works to maintain your movement, digestion, and other systems that fully function so that you can go about your day. When you're asleep, many of your systems rest, so your body can divert its attention and resources toward your immune system. This is when your white blood cells function optimally and ... can fight off ... the ... zzzzz",
+          "likes": 9,
+          "dislikes": 1
+        }
+      ]
+    },
+    {
+      "id": "fadb",
+      "title": "My Thoughts On Exercising",
+      "author": "Delugia Torrent",
+      "body": "Before I convey my thoughts, I first want to say that I was a competitive swimmer for 12 years, though I only swam year-round for 4 years. I enjoyed strength training and cardio - I would go to the gym and lift weights and go lap swimming even between classes due to my passion for the sport. A big part of me believes that I only enjoyed working out because it benefited my performance in the sport of swimming. I was never an Olympic-level swimmer. Now that I've graduated and no longer swim competitively, I have lost all interest in physical activity. I still engage in calisthenics, but not nearly as often as I used to. I don't see a need since my efforts will not improve my performance in a sport that I no longer engage in. While working out makes me stronger (and look better), the process is exhausting and time consuming, and I'm always hungry! If anyone has any similar experiences or thoughts, I'm open to hearing them.",
+      "likes": 17,
+      "dislikes": 19,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Bufford Guy",
+          "body": "I see where you're coming from. I get it, but there is more to exercising than just to improve your performance in sports. With a healthy amount of physical activity, you improve your daily life. For example, you can travel and climb stairs with experiencing fatigue, you can move your furniture and lift your future children, and most importantly, it reduces the risk of heart disease and diseases associated with obesity. While you don't have the train to failure (like you used to for swimming), basic strength training and cardio will do your health wonders.",
+          "likes": 16,
+          "dislikes": 3
+        },
+        {
+          "commentId": 1,
+          "author": "Rudious Personia",
+          "body": "You stopped exercising because you couldn't make it to the Olympics??? Sounds like you gave up to me. What a loser.",
+          "likes": 9,
           "dislikes": 10
+        },
+        {
+          "commentId": 2,
+          "author": "Misty Atmos",
+          "body": "Hi! Fellow competitive swimmer here. I also just graduated, and while I didn't make it to the Olympics, I still go to the YMCA and do lap swimming because I find it both fun and fulfilling. You're welcome to join me if you want. I work there, so I can bring up to one guest for free. If you haven't rusted up yet, we should race :)",
+          "likes": 11,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": "1ffe",
+      "title": "My Head Hurts",
+      "author": "Slea Depry",
+      "body": "My head feels like it's going to explode! I find it difficult to get up in the morning, but I have to go to work (it's been really busy). Does anyone know any hacks that can quickly alleviate the pain? Ideally, I don't want to take any medication, as I prefer relying on more natural methods. Any help would be greatly appreciated!",
+      "likes": 24,
+      "dislikes": 7,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Lofy Idlen",
+          "body": "Looks like work is stressing you out. Don't go to work. Problem solved.",
+          "likes": 4,
+          "dislikes": 4
+        },
+        {
+          "commentId": 1,
+          "author": "Leisa Eason",
+          "body": "I don't know your entire situation, but based on your post, it seems like your job is taking a major toll on you. If your boss allows it, please take some days off and get some rest. You don't want to risk your own health. Make sure you drink enough water and apply a hot/cold compress. That should ease the pain to some degree. If the pain becomes unbearable, consider taking over-the-counter medicines like Tylenol. I know you don't want to take any medication, so use Tylenol as a last resort.",
+          "likes": 11,
+          "dislikes": 2
+        }
+      ]
+    },
+    {
+      "id": "acdd",
+      "title": "I Have a Lot of Acne",
+      "author": "Sebacean Poreas",
+      "body": "Recently, I've been ravaged be acne all over my face and my back. For context, I'm 28 years old, so I am way past puberty. My family and even my friends have taken notice and constantly ask me about it. The thing is, I don't have an answer. I never had this much acne before. Anyone know what may be causing this? A solution would be nice too. Thanks.",
+      "likes": 17,
+      "dislikes": 3,
+      "comments": [
+        {
+          "commentId": 0,
+          "author": "Dinot Peruz",
+          "body": "You're probably going through puberty. Happened to me throughout middle school and high school. I got teased endlessly about it, but I brushed it off. Give it a couple of months/years, and it will eventually go away on its own.",
+          "likes": 1,
+          "dislikes": 3
+        },
+        {
+          "commentId": 1,
+          "author": "Dighette Selek",
+          "body": "Since you are way past the age of puberty, there are 2 common factors that contribute to acne: diet and hormones. Are you eating anything greasy like deep-fried foods, burgers, and chocolates? If so, consider eating healthier options like grilled foods and vegetables. Are you constantly stressed? When stressed, your body releases cortisol to ensure your body operates in stressful situations at the expense of your immune system. This can slow your body's ability to heal acne.",
+          "likes": 14,
+          "dislikes": 2
+        },
+        {
+          "commentId": 2,
+          "author": "Bubbles Zitte",
+          "body": "Just pop them. A lot of people find it satisfying, including myself. If you're afraid to, you can always find a professional who will do it for you. In addition to popping, they will also squeeze out the pus hidden underneath.",
+          "likes": 4,
+          "dislikes": 5
         }
       ]
     }
