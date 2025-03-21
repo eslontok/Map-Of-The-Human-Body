@@ -48,8 +48,8 @@
     cursor: pointer;
 }
 .body {
-    margin: 0 auto;
     max-width: 60em;
+    margin: 0 auto;
     padding: 2em;
 }
 .body h1 {

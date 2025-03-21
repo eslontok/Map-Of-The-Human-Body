@@ -1,13 +1,33 @@
 /* MAP */
 
-.map {
+.mapScene {
     background: #28282B;
     min-width: 100vw;
     min-height: 100vh;
-    margin: 0 auto;
+}
+.map {
+    max-width: 70em;
     text-align: center;
+    margin: 0 auto;
+    padding: 2em;
 }
 .map h2 {
     color: #FFFFFF;
     margin-bottom: 5px;
+}
+.map label {
+    display: inline-block;
+    color: #FFFFFF;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+.map select {
+    background: none;
+    padding: 2px;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.map option {
+    background: #28282B;
 }
