@@ -64,6 +64,7 @@
 .options {
     display: flex;
     justify-content: center;
+    align-items: start;
 }
 .options button {
     background-color: #393539;
