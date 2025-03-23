@@ -19,7 +19,6 @@
     display: inline-block;
     color: #FFFFFF;
     margin-right: 5px;
-    margin-bottom: 20px;
 }
 .map select {
     background: none;
@@ -30,4 +29,37 @@
 }
 .map option {
     background: #28282B;
+}
+.map button {
+    background-color: #393539;
+    width: 10em;
+    height: 2em;
+    border-radius: 10px;
+}
+.map button:hover {
+    outline: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+.mapDetails {
+    display: flex;
+    justify-content: center;
+}
+.partsLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.mapDiagram {
+    width: 15em;
+    height: 35em;
+    margin: 1em;
+}
+.mapDiagram img {
+    width: 100%;
+    height: 100%;
+}
+.partsRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
