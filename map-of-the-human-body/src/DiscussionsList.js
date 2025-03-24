@@ -60,7 +60,7 @@ function DiscussionsList(props){
         <div className="discussionsList">
             <Observer/>
             {discussions.map((discussion) => (
-                <div className="discussionPreview hide" key={discussion.id}>
+                <div className="discussionPreview hide slideInRight" key={discussion.id}>
                     <Link to={`/discussions/${discussion.id}`}>
                         <h3>{discussion.title}</h3>
                         <h4>Posted by: {discussion.author}</h4>

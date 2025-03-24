@@ -120,7 +120,7 @@ function CommentsList(props){
         <div className="commentsList">
             <Observer/>
             {comments.map((comment) => (
-                <div className="commentPreview hide" key={comment.commentId}>
+                <div className="commentPreview hide slideInRight" key={comment.commentId}>
                     <h4>Commented by: {comment.author}</h4>
                     <p>{comment.body}</p>
                     <button onClick={() => handleLike(comment.commentId)}>

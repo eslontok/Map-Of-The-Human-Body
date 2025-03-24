@@ -1,5 +1,6 @@
 import "./css/map.css";
 import {useState} from "react";
+import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
 import organsBody from "./css/images/organs-body/organs-body.png";
 import skeletonBody from "./css/images/skeleton-body/skeleton-body.png";
@@ -22,6 +23,7 @@ function Map(){
     return(
         <div className="mapScene">
             <div className="map">
+                <Observer/>
                 <ScrollToTop/>
                 <h2>Navigate The Body</h2>
                 <label>Map Of:</label>
@@ -32,7 +34,7 @@ function Map(){
                     <option value="Muscles (Back)">Muscles (Back)</option>
                 </select>
                 <div className="mapDetails">
-                    <div className="partsLeft">
+                    <div className="partsLeft hide slideInLeft">
                         {selection === "Organs" && organsParts.slice(0, 6).map((organ) => (
                             <div key={organ}>
                                 <button>{organ}</button>
@@ -54,13 +56,13 @@ function Map(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram">
+                    <div className="mapDiagram hide fadeIn">
                         {selection === "Organs" && <img src={organsBody} alt=""></img>}
                         {selection === "Skeleton" && <img src={skeletonBody} alt=""></img>}
                         {selection === "Muscles (Front)" && <img src={muscleBodyFront} alt=""></img>}
                         {selection === "Muscles (Back)" && <img src={muscleBodyBack} alt=""></img>}
                     </div>
-                    <div className="partsRight">
+                    <div className="partsRight hide slideInRight">
                         {selection === "Organs" && organsParts.slice(6, 13).map((organ) => (
                             <div key={organ}>
                                 <button>{organ}</button>

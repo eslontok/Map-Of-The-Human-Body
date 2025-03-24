@@ -2,10 +2,10 @@ import "./css/home.css";
 import {useRef} from "react";
 import {Link} from "react-router-dom";
 import Observer from "./Observer";
+import ScrollToTop from "./ScrollToTop";
 import body from "./css/images/body.png";
 import system from "./css/images/system.png";
 import disease from "./css/images/disease.png";
-import ScrollToTop from "./ScrollToTop";
 
 function Home(){
 
@@ -20,8 +20,8 @@ function Home(){
             <Observer/>
             <ScrollToTop/>
             <div className="header">
-                <h2 className="hide">Map of the<br></br>Human Body</h2>
-                <button className="hide animate-stagger-long" onClick={handleExplore}>Explore</button>
+                <h2 className="hide slideInRight">Map of the<br></br>Human Body</h2>
+                <button className="hide slideInRight animate-stagger-long" onClick={handleExplore}>Explore</button>
             </div>
             <div className="body">
                 <h1>Welcome!</h1>
@@ -29,19 +29,19 @@ function Home(){
                 <div className="options" ref={exploreRef}>
                     <div>
                         <Link to="/map">
-                            <button className="hide" title="Map"><img src={body} alt=""></img></button>
+                            <button className="hide slideInRight" title="Map"><img src={body} alt=""></img></button>
                         </Link>
                         <p>Begin your journey and navigate the map of the human body.</p>
                     </div>
                     <div>
                         <Link to="/systems">
-                            <button className="hide animate-stagger-short" title="Systems"><img src={system} alt=""></img></button>
+                            <button className="hide slideInRight animate-stagger-short" title="Systems"><img src={system} alt=""></img></button>
                         </Link>
                         <p>Understand the physiological systems that allow you to go about your day.</p>
                     </div>
                     <div>
                         <Link to="/diseases">
-                            <button className="hide animate-stagger-long" title="Diseases"><img src={disease} alt=""></img></button>
+                            <button className="hide slideInRight animate-stagger-long" title="Diseases"><img src={disease} alt=""></img></button>
                         </Link>
                         <p>Know your body's common enemies and learn their weaknesses.</p>
                     </div>
