@@ -2,15 +2,18 @@ import "./css/map.css";
 import {useState} from "react";
 import ScrollToTop from "./ScrollToTop";
 import organsBody from "./css/images/organs-body/organs-body.png";
+import skeletonBody from "./css/images/skeleton-body/skeleton-body.png";
+import muscleBodyFront from "./css/images/muscle-body-front/muscle-body-front.png";
+import muscleBodyBack from "./css/images/muscle-body-back/muscle-body-back.png";
 
 function Map(){
 
     const [selection, setSelection] = useState("Organs");
 
-    const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Pancreas","Gallbladder","Small Intestine","Large Intestine","Kidney","Bladder"]; //13
+    const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Pancreas","Gallbladder","Small Intestine","Large Intestine","Kidneys","Bladder"]; //13
     const skeletonParts = ["All","Head","Collar","Upper Arm","Forearm","Hands","Spine","Torso","Hip","Thigh","Lower Leg","Feet"]; //12
     const musclesFrontParts = ["All","Head","Shoulders","Upper Arm","Forearm","Hands","Chest","Abdomen","Obliques","Thigh","Lower Leg","Feet"]; //12
-    const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Obliques","Lower Back","Glutes","Thigh","Lower Leg"]; //10
+    const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
 
     const handleChange = (e) => {
         setSelection(e.target.value);
@@ -45,14 +48,17 @@ function Map(){
                                 <button>{muscle}</button>
                             </div>
                         ))}
-                        {selection === "Muscles (Back)" && musclesBackParts.slice(0, 5).map((muscle) => (
+                        {selection === "Muscles (Back)" && musclesBackParts.slice(0, 4).map((muscle) => (
                             <div key={muscle}>
                                 <button>{muscle}</button>
                             </div>
                         ))}
                     </div>
                     <div className="mapDiagram">
-                        <img src={organsBody} alt=""></img>
+                        {selection === "Organs" && <img src={organsBody} alt=""></img>}
+                        {selection === "Skeleton" && <img src={skeletonBody} alt=""></img>}
+                        {selection === "Muscles (Front)" && <img src={muscleBodyFront} alt=""></img>}
+                        {selection === "Muscles (Back)" && <img src={muscleBodyBack} alt=""></img>}
                     </div>
                     <div className="partsRight">
                         {selection === "Organs" && organsParts.slice(6, 13).map((organ) => (
@@ -70,7 +76,7 @@ function Map(){
                                 <button>{muscle}</button>
                             </div>
                         ))}
-                        {selection === "Muscles (Back)" && musclesBackParts.slice(5, 10).map((muscle) => (
+                        {selection === "Muscles (Back)" && musclesBackParts.slice(4, 9).map((muscle) => (
                             <div key={muscle}>
                                 <button>{muscle}</button>
                             </div>
