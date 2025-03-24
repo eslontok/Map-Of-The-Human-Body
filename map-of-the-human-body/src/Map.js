@@ -57,7 +57,7 @@ function Map(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram hide fadeIn">
+                    <div className="mapDiagram hide slideInBottom">
                         <img src={diagram} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">
