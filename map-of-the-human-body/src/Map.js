@@ -2,17 +2,17 @@ import "./css/map.css";
 import {useState} from "react";
 import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
-import organsInfo from "./OrgansInfo"
-import skeletonBody from "./css/images/skeleton-body/skeleton.png";
-import muscleBodyFront from "./css/images/muscle-body-front/muscle-front.png";
-import muscleBodyBack from "./css/images/muscle-body-back/muscle-back.png";
+import organsInfo from "./OrgansInfo";
+import skeletonInfo from "./SkeletonInfo";
+import musclesFrontInfo from "./MusclesFrontInfo";
+import musclesBackInfo from "./MusclesBackInfo";
 
 function Map(){
 
     const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Pancreas","Gallbladder","Small Intestine","Large Intestine","Kidneys","Bladder"]; //13
     const skeletonParts = ["All","Head","Collar","Upper Arm","Forearm","Hands","Spine","Torso","Hip","Thigh","Lower Leg","Feet"]; //12
-    const muscleFrontParts = ["All","Head","Shoulders","Upper Arm","Forearm","Hands","Chest","Abdomen","Obliques","Thigh","Lower Leg","Feet"]; //12
-    const muscleBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
+    const musclesFrontParts = ["All","Head","Shoulders","Upper Arm","Forearm","Hands","Chest","Abdomen","Obliques","Thigh","Lower Leg","Feet"]; //12
+    const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
 
     const [selection, setSelection] = useState("Organs");
     const [parts, setParts] = useState(organsParts);
@@ -27,17 +27,20 @@ function Map(){
             setDiagram(organsImage);
             setDiagramPart(organsImage);
         }else if(option === "Skeleton"){
+            const skeletonImage = skeletonInfo.get("All");
             setParts(skeletonParts);
-            setDiagram(skeletonBody);
-            setDiagramPart(skeletonBody);
+            setDiagram(skeletonImage);
+            setDiagramPart(skeletonImage);
         }else if(option === "Muscles (Front)"){
-            setParts(muscleFrontParts);
-            setDiagram(muscleBodyFront);
-            setDiagramPart(muscleBodyFront);
+            const musclesFrontImage = musclesFrontInfo.get("All");
+            setParts(musclesFrontParts);
+            setDiagram(musclesFrontImage);
+            setDiagramPart(musclesFrontImage);
         }else if(option === "Muscles (Back)"){
-            setParts(muscleBackParts);
-            setDiagram(muscleBodyBack);
-            setDiagramPart(muscleBodyBack);
+            const musclesBackImage = musclesBackInfo.get("All");
+            setParts(musclesBackParts);
+            setDiagram(musclesBackImage);
+            setDiagramPart(musclesBackImage);
         }
         const hiddenElements = document.querySelectorAll('.show');
         hiddenElements.forEach((element) => element.classList.remove('show'));
@@ -45,7 +48,16 @@ function Map(){
     }
 
     const handleClick = (e) => {
-        const diagramPartImage = organsInfo.get(e.target.value);
+        let diagramPartImage = null;
+        if(selection === "Organs"){
+            diagramPartImage = organsInfo.get(e.target.value);
+        }else if(selection === "Skeleton"){
+            diagramPartImage = skeletonInfo.get(e.target.value);
+        }else if(selection === "Muscles (Front)"){
+            diagramPartImage = musclesFrontInfo.get(e.target.value);
+        }else if(selection === "Muscles (Back)"){
+            diagramPartImage = musclesBackInfo.get(e.target.value);
+        }
         setDiagramPart(diagramPartImage);
     }
 
@@ -70,7 +82,7 @@ function Map(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.8), rgba(40,40,43,0.8)), url(" + diagram + ")"}}>
+                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagram + ")"}}>
                         <img src={diagramPart} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">

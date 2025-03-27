@@ -13,6 +13,7 @@ import Kidneys from "./css/images/organs-body/organs-kidneys.png";
 import Bladder from "./css/images/organs-body/organs-bladder.png";
 
 const organsInfo = new Map();
+
 organsInfo.set("All", All);
 organsInfo.set("Brain", Brain);
 organsInfo.set("Esophagus", Esophagus);
