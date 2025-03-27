@@ -17,6 +17,7 @@ function Map(){
     const [selection, setSelection] = useState("Organs");
     const [parts, setParts] = useState(organsParts);
     const [diagram, setDiagram] = useState(organsInfo.get("All"));
+    const [diagramPart, setDiagramPart] = useState(organsInfo.get("All"));
 
     const handleChange = (e) => {
         const option = e.target.value;
@@ -24,15 +25,19 @@ function Map(){
             const organsImage = organsInfo.get("All");
             setParts(organsParts);
             setDiagram(organsImage);
+            setDiagramPart(organsImage);
         }else if(option === "Skeleton"){
             setParts(skeletonParts);
             setDiagram(skeletonBody);
+            setDiagramPart(skeletonBody);
         }else if(option === "Muscles (Front)"){
             setParts(muscleFrontParts);
             setDiagram(muscleBodyFront);
+            setDiagramPart(muscleBodyFront);
         }else if(option === "Muscles (Back)"){
             setParts(muscleBackParts);
             setDiagram(muscleBodyBack);
+            setDiagramPart(muscleBodyBack);
         }
         const hiddenElements = document.querySelectorAll('.show');
         hiddenElements.forEach((element) => element.classList.remove('show'));
@@ -40,9 +45,8 @@ function Map(){
     }
 
     const handleClick = (e) => {
-        const part = e.target.value;
-        const partImage = organsInfo.get(part);
-        setDiagram(partImage);
+        const diagramPartImage = organsInfo.get(e.target.value);
+        setDiagramPart(diagramPartImage);
     }
 
     return(
@@ -66,8 +70,8 @@ function Map(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram hide slideInBottom">
-                        <img src={diagram} alt=""></img>
+                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.8), rgba(40,40,43,0.8)), url(" + diagram + ")"}}>
+                        <img src={diagramPart} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">
                         {parts.slice(parts.length / 2, parts.length).map((part) => (
