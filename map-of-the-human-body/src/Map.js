@@ -18,6 +18,7 @@ function Map(){
     const [parts, setParts] = useState(organsParts);
     const [diagram, setDiagram] = useState(organsInfo.get("All"));
     const [diagramPart, setDiagramPart] = useState(organsInfo.get("All"));
+    const [diagramPartContent, setDiagramPartContent] = useState("All");
 
     const handleChange = (e) => {
         const option = e.target.value;
@@ -44,6 +45,7 @@ function Map(){
         }
         const hiddenElements = document.querySelectorAll('.show');
         hiddenElements.forEach((element) => element.classList.remove('show'));
+        setDiagramPartContent("All");
         setSelection(option);
     }
 
@@ -58,6 +60,7 @@ function Map(){
         }else if(selection === "Muscles (Back)"){
             diagramPartImage = musclesBackInfo.get(e.target.value);
         }
+        setDiagramPartContent(e.target.value);
         setDiagramPart(diagramPartImage);
     }
 
@@ -75,6 +78,9 @@ function Map(){
                     <option value="Muscles (Back)">Muscles (Back)</option>
                 </select>
                 <div className="mapDetails">
+                    <div className="partsLeftContent">
+                        <p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>
+                    </div>
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((part) => (
                             <div key={part}>
@@ -91,6 +97,9 @@ function Map(){
                                 <button value={part} onClick={(e) => handleClick(e)}>{part}</button>
                             </div>
                         ))}
+                    </div>
+                    <div className="partsRightContent">
+                        <p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>
                     </div>
                 </div>
             </div>
