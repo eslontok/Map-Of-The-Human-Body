@@ -20,8 +20,6 @@ function HumanMap(){
     const [diagramPart, setDiagramPart] = useState(organsInfo.get("All"));
     const [diagramPartContent, setDiagramPartContent] = useState("All");
 
-    let isDisplayed = new Map();
-
     const handleChange = (e) => {
         const option = e.target.value;
         if(option === "Organs"){
@@ -44,16 +42,15 @@ function HumanMap(){
     }
 
     const handleClick = (e) => {
-        const name = e.target.value;
         let diagramPartImage = null;
         if(selection === "Organs"){
             diagramPartImage = organsInfo.get(e.target.value);
         }else if(selection === "Skeleton"){
-            diagramPartImage = skeletonInfo.get(name);
+            diagramPartImage = skeletonInfo.get(e.target.value);
         }else if(selection === "Muscles (Front)"){
-            diagramPartImage = musclesFrontInfo.get(name);
+            diagramPartImage = musclesFrontInfo.get(e.target.value);
         }else if(selection === "Muscles (Back)"){
-            diagramPartImage = musclesBackInfo.get(name);
+            diagramPartImage = musclesBackInfo.get(e.target.value);
         }
         setDiagramPartContent(e.target.value);
         setDiagramPart(diagramPartImage);
