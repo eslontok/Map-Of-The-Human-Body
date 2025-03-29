@@ -1,43 +1,43 @@
-/* MAP */
+/* BODY MAP */
 
 .mapScene {
     background: #28282B;
     min-width: 100vw;
     min-height: 100vh;
 }
-.map {
+.bodyMap {
     max-width: 70em;
     text-align: center;
     margin: 0 auto;
     padding-top: 2em;
     padding-bottom: 2em;
 }
-.map h2 {
+.bodyMap h2 {
     color: #FFFFFF;
     margin-bottom: 5px;
 }
-.map label {
+.bodyMap label {
     display: inline-block;
     color: #FFFFFF;
     margin-right: 5px;
 }
-.map select {
+.bodyMap select {
     background: none;
     padding: 2px;
     border: 1px solid #FFFFFF;
     border-radius: 16px;
     cursor: pointer;
 }
-.map option {
+.bodyMap option {
     background: #28282B;
 }
-.map button {
+.bodyMap button {
     background-color: #393539;
     width: 10em;
     height: 2em;
     border-radius: 10px;
 }
-.map button:hover {
+.bodyMap button:hover {
     outline: 2px solid #FFFFFF;
     cursor: pointer;
 }
@@ -53,6 +53,7 @@
 .partsLeftContent {
     align-content: center;
     margin-right: 2em;
+    border: 1px solid #00FFFF;
 }
 .mapDiagram {
     background-size: 100% 100%;
@@ -72,4 +73,5 @@
 .partsRightContent {
     align-content: center;
     margin-left: 2em;
+    border: 1px solid #00FFFF;
 }
