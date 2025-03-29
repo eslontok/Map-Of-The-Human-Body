@@ -16,24 +16,24 @@ function HumanMap(){
 
     const [selection, setSelection] = useState("Organs");
     const [parts, setParts] = useState(organsParts);
-    const [diagram, setDiagram] = useState(organsInfo.get("All"));
-    const [diagramPart, setDiagramPart] = useState(organsInfo.get("All"));
+    const [diagramImage, setDiagramImage] = useState(organsInfo.get("All"));
+    const [partImage, setPartImage] = useState(organsInfo.get("All"));
     const [diagramPartContent, setDiagramPartContent] = useState("All");
 
     const handleChange = (e) => {
         const option = e.target.value;
         if(option === "Organs"){
             const organsImage = organsInfo.get("All");
-            setParts(organsParts); setDiagram(organsImage); setDiagramPart(organsImage);
+            setParts(organsParts); setDiagramImage(organsImage); setPartImage(organsImage);
         }else if(option === "Skeleton"){
             const skeletonImage = skeletonInfo.get("All");
-            setParts(skeletonParts); setDiagram(skeletonImage); setDiagramPart(skeletonImage);
+            setParts(skeletonParts); setDiagramImage(skeletonImage); setPartImage(skeletonImage);
         }else if(option === "Muscles (Front)"){
             const musclesFrontImage = musclesFrontInfo.get("All");
-            setParts(musclesFrontParts); setDiagram(musclesFrontImage); setDiagramPart(musclesFrontImage);
+            setParts(musclesFrontParts); setDiagramImage(musclesFrontImage); setPartImage(musclesFrontImage);
         }else if(option === "Muscles (Back)"){
             const musclesBackImage = musclesBackInfo.get("All");
-            setParts(musclesBackParts); setDiagram(musclesBackImage); setDiagramPart(musclesBackImage);
+            setParts(musclesBackParts); setDiagramImage(musclesBackImage); setPartImage(musclesBackImage);
         }
         const shownElements = document.querySelectorAll('.show');
         shownElements.forEach((element) => element.classList.remove('show'));
@@ -42,18 +42,18 @@ function HumanMap(){
     }
 
     const handleClick = (e) => {
-        let diagramPartImage = null;
+        let partImage = null;
         if(selection === "Organs"){
-            diagramPartImage = organsInfo.get(e.target.value);
+            partImage = organsInfo.get(e.target.value);
         }else if(selection === "Skeleton"){
-            diagramPartImage = skeletonInfo.get(e.target.value);
+            partImage = skeletonInfo.get(e.target.value);
         }else if(selection === "Muscles (Front)"){
-            diagramPartImage = musclesFrontInfo.get(e.target.value);
+            partImage = musclesFrontInfo.get(e.target.value);
         }else if(selection === "Muscles (Back)"){
-            diagramPartImage = musclesBackInfo.get(e.target.value);
+            partImage = musclesBackInfo.get(e.target.value);
         }
         setDiagramPartContent(e.target.value);
-        setDiagramPart(diagramPartImage);
+        setPartImage(partImage);
     }
 
     return(
@@ -71,7 +71,8 @@ function HumanMap(){
                 </select>
                 <div className="mapDetails">
                     <div className="partsLeftContent hide slideInLeft">
-                        <p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>
+                        {/*<p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>*/}
+                        <p>Hello World</p>
                     </div>
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((part) => (
@@ -80,8 +81,8 @@ function HumanMap(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagram + ")"}}>
-                        <img src={diagramPart} alt=""></img>
+                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagramImage + ")"}}>
+                        <img src={partImage} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">
                         {parts.slice(parts.length / 2, parts.length).map((part) => (
@@ -91,7 +92,8 @@ function HumanMap(){
                         ))}
                     </div>
                     <div className="partsRightContent hide slideInRight">
-                        <p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>
+                        {/*<p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>*/}
+                        <p>Hello World</p>
                     </div>
                 </div>
             </div>

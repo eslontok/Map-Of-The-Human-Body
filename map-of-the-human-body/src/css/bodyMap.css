@@ -59,6 +59,8 @@
     background-size: 100% 100%;
     min-width: 15em;
     min-height: 35em;
+    width: 15em;
+    height: 35em;
     margin: 2em;
 }
 .mapDiagram img {
