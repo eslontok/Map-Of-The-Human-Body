@@ -7,7 +7,7 @@ import skeletonInfo from "./SkeletonInfo";
 import musclesFrontInfo from "./MusclesFrontInfo";
 import musclesBackInfo from "./MusclesBackInfo";
 
-function HumanMap(){
+function BodyMap(){
 
     const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Pancreas","Gallbladder","Small Intestine","Large Intestine","Kidneys","Bladder"]; //13
     const skeletonParts = ["All","Head","Collar","Upper Arm","Forearm","Hands","Spine","Torso","Hip","Thigh","Lower Leg","Feet"]; //12
@@ -15,45 +15,74 @@ function HumanMap(){
     const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
 
     const [selection, setSelection] = useState("Organs");
-    const [parts, setParts] = useState(organsParts);
     const [diagramImage, setDiagramImage] = useState(organsInfo.get("All"));
+    const [parts, setParts] = useState(organsParts);
+    const [part, setPart] = useState("All");
     const [partImage, setPartImage] = useState(organsInfo.get("All"));
-    const [diagramPartContent, setDiagramPartContent] = useState("All");
+
+    const [isDisplayed, setIsDisplayed] = useState(new Map());
+    const [sideDisplayed, setSideDisplayed] = useState(null);
 
     const handleChange = (e) => {
         const option = e.target.value;
+        const map = new Map();
         if(option === "Organs"){
             const organsImage = organsInfo.get("All");
-            setParts(organsParts); setDiagramImage(organsImage); setPartImage(organsImage);
+            setDiagramImage(organsImage); setParts(organsParts); setPart("All"); setPartImage(organsImage);
+            organsParts.forEach((name) => map.set(name, false));
         }else if(option === "Skeleton"){
             const skeletonImage = skeletonInfo.get("All");
-            setParts(skeletonParts); setDiagramImage(skeletonImage); setPartImage(skeletonImage);
+            setDiagramImage(skeletonImage); setParts(skeletonParts); setPart("All"); setPartImage(skeletonImage);
+            skeletonParts.forEach((name) => map.set(name, false));
         }else if(option === "Muscles (Front)"){
             const musclesFrontImage = musclesFrontInfo.get("All");
-            setParts(musclesFrontParts); setDiagramImage(musclesFrontImage); setPartImage(musclesFrontImage);
+            setDiagramImage(musclesFrontImage); setParts(musclesFrontParts); setPart("All"); setPartImage(musclesFrontImage);
+            musclesFrontParts.forEach((name) => map.set(name, false));
         }else if(option === "Muscles (Back)"){
             const musclesBackImage = musclesBackInfo.get("All");
-            setParts(musclesBackParts); setDiagramImage(musclesBackImage); setPartImage(musclesBackImage);
+            setDiagramImage(musclesBackImage); setParts(musclesBackParts); setPart("All"); setPartImage(musclesBackImage);
+            musclesBackParts.forEach((name) => map.set(name, false));
         }
         const shownElements = document.querySelectorAll('.show');
         shownElements.forEach((element) => element.classList.remove('show'));
-        setDiagramPartContent("All");
         setSelection(option);
+        setIsDisplayed(map);
+        setSideDisplayed(null);
     }
 
-    const handleClick = (e) => {
-        let partImage = null;
+    const handleClick = (e, side) => {
+        let newPartImage = null;
+        let defaultImage = null;
+        const currIsDisplayed = isDisplayed.get(e.target.value);
+        const map = new Map();
         if(selection === "Organs"){
-            partImage = organsInfo.get(e.target.value);
+            newPartImage = organsInfo.get(e.target.value);
+            defaultImage = organsInfo.get("All");
+            organsParts.forEach((name) => map.set(name, false));
         }else if(selection === "Skeleton"){
-            partImage = skeletonInfo.get(e.target.value);
+            newPartImage = skeletonInfo.get(e.target.value);
+            defaultImage = skeletonInfo.get("All");
+            skeletonParts.forEach((name) => map.set(name, false));
         }else if(selection === "Muscles (Front)"){
-            partImage = musclesFrontInfo.get(e.target.value);
+            newPartImage = musclesFrontInfo.get(e.target.value);
+            defaultImage = musclesFrontInfo.get("All");
+            musclesFrontParts.forEach((name) => map.set(name, false));
         }else if(selection === "Muscles (Back)"){
-            partImage = musclesBackInfo.get(e.target.value);
+            newPartImage = musclesBackInfo.get(e.target.value);
+            defaultImage = musclesBackInfo.get("All");
+            musclesBackParts.forEach((name) => map.set(name, false));
         }
-        setDiagramPartContent(e.target.value);
-        setPartImage(partImage);
+        if(!currIsDisplayed){
+            map.set(e.target.value, true);
+        }else{
+            newPartImage = defaultImage;
+        }
+        const shownElements = document.querySelectorAll('.partsLeftContent, .partsRightContent');
+        shownElements.forEach((element) => element.classList.remove('show'));
+        setPart(e.target.value);
+        setPartImage(newPartImage);
+        setIsDisplayed(map);
+        setSideDisplayed(side);
     }
 
     return(
@@ -71,13 +100,13 @@ function HumanMap(){
                 </select>
                 <div className="mapDetails">
                     <div className="partsLeftContent hide slideInLeft">
-                        {/*<p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>*/}
-                        <p>Hello World</p>
+                        {(!isDisplayed.get(part) || sideDisplayed === "right") && <p style={{opacity: "0"}}>Hello World {part}</p>}
+                        {(isDisplayed.get(part) && sideDisplayed === "left") && <p>Hello World {part}</p>}
                     </div>
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((part) => (
                             <div key={part}>
-                                <button value={part} onClick={(e) => handleClick(e)}>{part}</button>
+                                <button value={part} onClick={(e) => handleClick(e, "left")}>{part}</button>
                             </div>
                         ))}
                     </div>
@@ -87,13 +116,13 @@ function HumanMap(){
                     <div className="partsRight hide slideInRight">
                         {parts.slice(parts.length / 2, parts.length).map((part) => (
                             <div key={part}>
-                                <button value={part} onClick={(e) => handleClick(e)}>{part}</button>
+                                <button value={part} onClick={(e) => handleClick(e, "right")}>{part}</button>
                             </div>
                         ))}
                     </div>
                     <div className="partsRightContent hide slideInRight">
-                        {/*<p>This area here will contain the content for {diagramPartContent}. I decided that it will simply span the entire left page when an option is clicked. When the user clicks the same option again, the content will collapse and hide.</p>*/}
-                        <p>Hello World</p>
+                        {(!isDisplayed.get(part) || sideDisplayed === "left") && <p style={{opacity: "0"}}>Hello World {part}</p>}
+                        {(isDisplayed.get(part) && sideDisplayed === "right") && <p>Hello World {part}</p>}
                     </div>
                 </div>
             </div>
@@ -101,4 +130,4 @@ function HumanMap(){
     );
 }
 
-export default HumanMap;
+export default BodyMap;
