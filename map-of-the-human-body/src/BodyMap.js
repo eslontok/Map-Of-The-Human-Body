@@ -106,7 +106,8 @@ function BodyMap(){
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((part) => (
                             <div key={part}>
-                                <button value={part} onClick={(e) => handleClick(e, "left")}>{part}</button>
+                                {(!isDisplayed.get(part) || sideDisplayed === "right") && <button value={part} onClick={(e) => handleClick(e, "left")}>{part}</button>}
+                                {(isDisplayed.get(part) && sideDisplayed === "left") && <button value={part} onClick={(e) => handleClick(e, "left")} style={{backgroundColor: "#708090"}}>{part}</button>}
                             </div>
                         ))}
                     </div>
@@ -116,7 +117,8 @@ function BodyMap(){
                     <div className="partsRight hide slideInRight">
                         {parts.slice(parts.length / 2, parts.length).map((part) => (
                             <div key={part}>
-                                <button value={part} onClick={(e) => handleClick(e, "right")}>{part}</button>
+                                {(!isDisplayed.get(part) || sideDisplayed === "left") && <button value={part} onClick={(e) => handleClick(e, "right")}>{part}</button>}
+                                {(isDisplayed.get(part) && sideDisplayed === "right") && <button value={part} onClick={(e) => handleClick(e, "right")} style={{backgroundColor: "#708090"}}>{part}</button>}
                             </div>
                         ))}
                     </div>
