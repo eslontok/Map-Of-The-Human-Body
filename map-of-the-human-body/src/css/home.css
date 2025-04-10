@@ -33,7 +33,7 @@
     margin: 20px;
 }
 .header button {
-    background-color: #393539;
+    background-color: #353935;
     position: relative;
     display: block;
     border-radius: 20px;
@@ -67,7 +67,7 @@
     align-items: start;
 }
 .options button {
-    background-color: #393539;
+    background-color: #353935;
     width: 10em;
     height: 10em;
     border-radius: 20px;
