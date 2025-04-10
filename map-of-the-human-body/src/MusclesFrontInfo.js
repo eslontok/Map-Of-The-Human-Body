@@ -13,17 +13,17 @@ import Feet from "./css/images/muscle-body-front/muscle-feet.png";
 
 const musclesFrontInfo = new Map();
 
-musclesFrontInfo.set("All", All);
-musclesFrontInfo.set("Head", Head);
-musclesFrontInfo.set("Shoulders", Shoulders);
-musclesFrontInfo.set("Upper Arm", UpperArm);
-musclesFrontInfo.set("Forearm", Forearm);
-musclesFrontInfo.set("Hands", Hands);
-musclesFrontInfo.set("Chest", Chest);
-musclesFrontInfo.set("Abdomen", Abdomen);
-musclesFrontInfo.set("Obliques", Obliques);
-musclesFrontInfo.set("Thigh", Thigh);
-musclesFrontInfo.set("Lower Leg", LowerLeg);
-musclesFrontInfo.set("Feet", Feet);
+musclesFrontInfo.set("All", [All, "All content coming soon!"]);
+musclesFrontInfo.set("Head", [Head, "Head content coming soon!"]);
+musclesFrontInfo.set("Shoulders", [Shoulders, "Shoulders content coming soon!"]);
+musclesFrontInfo.set("Upper Arm", [UpperArm, "Upper Arm content coming soon!"]);
+musclesFrontInfo.set("Forearm", [Forearm, "Forearm content coming soon!"]);
+musclesFrontInfo.set("Hands", [Hands, "Hands content coming soon!"]);
+musclesFrontInfo.set("Chest", [Chest, "Chest content coming soon!"]);
+musclesFrontInfo.set("Abdomen", [Abdomen, "Abdomen content coming soon!"]);
+musclesFrontInfo.set("Obliques", [Obliques, "Obliques content coming soon!"]);
+musclesFrontInfo.set("Thigh", [Thigh, "Thigh content coming soon!"]);
+musclesFrontInfo.set("Lower Leg", [LowerLeg, "Lower Leg content coming soon!"]);
+musclesFrontInfo.set("Feet", [Feet, "Feet content coming soon!"]);
 
 export default musclesFrontInfo;

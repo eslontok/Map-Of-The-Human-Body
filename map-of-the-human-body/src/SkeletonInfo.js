@@ -13,17 +13,17 @@ import Feet from "./css/images/skeleton-body/skeleton-feet.png";
 
 const skeletonInfo = new Map();
 
-skeletonInfo.set("All", All);
-skeletonInfo.set("Head", Head);
-skeletonInfo.set("Collar", Collar);
-skeletonInfo.set("Upper Arm", UpperArm);
-skeletonInfo.set("Forearm", Forearm);
-skeletonInfo.set("Hands", Hands);
-skeletonInfo.set("Spine", Spine);
-skeletonInfo.set("Torso", Torso);
-skeletonInfo.set("Hip", Hip);
-skeletonInfo.set("Thigh", Thigh);
-skeletonInfo.set("Lower Leg", LowerLeg);
-skeletonInfo.set("Feet", Feet);
+skeletonInfo.set("All", [All, "All content coming soon!"]);
+skeletonInfo.set("Head", [Head, "Head content coming soon!"]);
+skeletonInfo.set("Collar", [Collar, "Collar content coming soon!"]);
+skeletonInfo.set("Upper Arm", [UpperArm, "Upper Arm content coming soon!"]);
+skeletonInfo.set("Forearm", [Forearm, "Forearm content coming soon!"]);
+skeletonInfo.set("Hands", [Hands, "Hands content coming soon!"]);
+skeletonInfo.set("Spine", [Spine, "Spine content coming soon!"]);
+skeletonInfo.set("Torso", [Torso, "Torso content coming soon!"]);
+skeletonInfo.set("Hip", [Hip, "Hip content coming soon!"]);
+skeletonInfo.set("Thigh", [Thigh, "Thigh content coming soon!"]);
+skeletonInfo.set("Lower Leg", [LowerLeg, "Lower Leg content coming soon!"]);
+skeletonInfo.set("Feet", [Feet, "Feet content coming soon!"]);
 
 export default skeletonInfo;

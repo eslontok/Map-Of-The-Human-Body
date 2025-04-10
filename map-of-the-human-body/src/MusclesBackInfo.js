@@ -10,14 +10,14 @@ import LowerLeg from "./css/images/muscle-body-back/muscle-lower-legs.png";
 
 const musclesBackInfo = new Map();
 
-musclesBackInfo.set("All", All);
-musclesBackInfo.set("Traps", Traps);
-musclesBackInfo.set("Shoulders", Shoulders);
-musclesBackInfo.set("Upper Arm", UpperArm);
-musclesBackInfo.set("Lats", Lats);
-musclesBackInfo.set("Lower Back", LowerBack);
-musclesBackInfo.set("Glutes", Glutes);
-musclesBackInfo.set("Thigh", Thigh);
-musclesBackInfo.set("Lower Leg", LowerLeg);
+musclesBackInfo.set("All", [All, "All content coming soon!"]);
+musclesBackInfo.set("Traps", [Traps, "Traps content coming soon!"]);
+musclesBackInfo.set("Shoulders", [Shoulders, "Shoulders content coming soon!"]);
+musclesBackInfo.set("Upper Arm", [UpperArm, "Upper Arm content coming soon!"]);
+musclesBackInfo.set("Lats", [Lats, "Lats content coming soon!"]);
+musclesBackInfo.set("Lower Back", [LowerBack, "Lower Back content coming soon!"]);
+musclesBackInfo.set("Glutes", [Glutes, "Glutes content coming soon!"]);
+musclesBackInfo.set("Thigh", [Thigh, "Thigh content coming soon!"]);
+musclesBackInfo.set("Lower Leg", [LowerLeg, "Lower Leg content coming soon!"]);
 
 export default musclesBackInfo;
