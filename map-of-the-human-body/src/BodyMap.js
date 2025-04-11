@@ -1,5 +1,5 @@
 import "./css/bodyMap.css";
-import {useState} from "react";
+import {useState, useRef} from "react";
 import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
 import organsInfo from "./OrgansInfo";
@@ -24,6 +24,8 @@ function BodyMap(){
     const [isSelected, setIsSelected] = useState(new Map());
     const [sideSelected, setSideSelected] = useState(null);
 
+    const diagramRef = useRef();
+
     const handleChange = (e) => {
         const option = e.target.value;
         const map = new Map();
@@ -46,6 +48,7 @@ function BodyMap(){
         }
         const shownElements = document.querySelectorAll('.show');
         shownElements.forEach((element) => element.classList.remove('show'));
+        diagramRef.current.scrollIntoView();
         setSelection(option);
         setIsSelected(map);
         setSideSelected(null);
@@ -115,7 +118,7 @@ function BodyMap(){
                             </div>
                         ))}
                     </div>
-                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagramImage + ")"}}>
+                    <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagramImage + ")"}} ref={diagramRef}>
                         <img src={partImage} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">
