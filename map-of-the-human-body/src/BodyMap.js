@@ -9,7 +9,7 @@ import musclesBackInfo from "./MusclesBackInfo";
 
 function BodyMap(){
 
-    const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Pancreas","Gallbladder","Small Intestine","Large Intestine","Kidneys","Bladder","Gonads"]; //14
+    const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Gallbladder","Pancreas","Small Intestine","Large Intestine","Kidneys","Bladder","Gonads"]; //14
     const skeletonParts = ["All","Head","Collar","Upper Arm","Forearm","Hands","Spine","Torso","Hip","Thigh","Lower Leg","Feet"]; //12
     const musclesFrontParts = ["All","Head","Shoulders","Upper Arm","Forearm","Hands","Chest","Abdomen","Obliques","Thigh","Lower Leg","Feet"]; //12
     const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
