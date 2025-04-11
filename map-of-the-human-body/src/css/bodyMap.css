@@ -57,7 +57,7 @@
 .partsLeftContent {
     text-align: left;
     width: 20em;
-    max-height: 35em;
+    max-height: 32em;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #71797E #28282B;
@@ -84,7 +84,7 @@
 .partsRightContent {
     text-align: left;
     width: 20em;
-    max-height: 35em;
+    max-height: 32em;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #71797E #28282B;

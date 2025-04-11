@@ -82,6 +82,7 @@ function BodyMap(){
         }
         const shownElements = document.querySelectorAll('.partsLeftContent, .partsRightContent');
         shownElements.forEach((element) => element.classList.remove('show'));
+        shownElements.forEach((element) => element.scroll(0, 0));
         setPart(name);
         setPartImage(newPartImage);
         setPartContent(newPartContent);
