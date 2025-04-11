@@ -32,35 +32,44 @@
     background: #28282B;
 }
 .bodyMap button {
-    background-color: #393539;
+    background-color: #353935;
     width: 10em;
     height: 2em;
     border-radius: 10px;
 }
 .bodyMap button:hover {
-    outline: 2px solid #FFFFFF;
+    outline: 2px solid #00FFFF;
     cursor: pointer;
 }
 .mapDetails {
     display: flex;
     justify-content: center;
+    align-items: center;
+    max-height: 35em;
+    margin-top: 1em;
 }
 .partsLeft {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: 35em;
 }
 .partsLeftContent {
-    align-content: center;
-    margin-right: 2em;
+    text-align: left;
+    width: 20em;
+    max-height: 35em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #71797E #28282B;
+    margin-right: 1em;
 }
 .mapDiagram {
     background-size: 100% 100%;
     min-width: 15em;
     min-height: 35em;
-    width: 15em;
+    width: 16em;
     height: 35em;
-    margin: 2em;
+    margin: 1em;
 }
 .mapDiagram img {
     width: 100%;
@@ -70,8 +79,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: 35em;
 }
 .partsRightContent {
-    align-content: center;
-    margin-left: 2em;
+    text-align: left;
+    width: 20em;
+    max-height: 35em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #71797E #28282B;
+    margin-left: 1em;
 }

@@ -104,8 +104,7 @@ function BodyMap(){
                 </select>
                 <div className="mapDetails">
                     <div className="partsLeftContent hide slideInLeft">
-                        {(!isSelected.get(part) || sideSelected === "right") && <p style={{opacity: "0"}}>{partContent}</p>}
-                        {(isSelected.get(part) && sideSelected === "left") && <p>{partContent}</p>}
+                        {(isSelected.get(part) && sideSelected === "left") && <p style={{whiteSpace: "pre-line"}}>{partContent}</p>}
                     </div>
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((name) => (
@@ -127,8 +126,7 @@ function BodyMap(){
                         ))}
                     </div>
                     <div className="partsRightContent hide slideInRight">
-                        {(!isSelected.get(part) || sideSelected === "left") && <p style={{opacity: "0"}}>{partContent}</p>}
-                        {(isSelected.get(part) && sideSelected === "right") && <p>{partContent}</p>}
+                        {(isSelected.get(part) && sideSelected === "right") && <p style={{whiteSpace: "pre-line"}}>{partContent}</p>}
                     </div>
                 </div>
             </div>
