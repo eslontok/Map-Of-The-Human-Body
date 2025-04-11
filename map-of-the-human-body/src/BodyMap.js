@@ -90,7 +90,7 @@ function BodyMap(){
     }
 
     return(
-        <div className="mapScene">
+        <div className="bodyMapScene">
             <div className="bodyMap">
                 <Observer/>
                 <ScrollToTop/>
