@@ -1,7 +1,9 @@
 /* BODY MAP */
 
 .bodyMapScene {
-    background: #28282B;
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
     min-width: 100vw;
     min-height: 100vh;
 }
@@ -54,7 +56,7 @@
     justify-content: space-around;
     min-height: 35em;
 }
-.partsLeftContent {
+.partsContent {
     text-align: left;
     width: 20em;
     max-height: 32em;
@@ -65,11 +67,12 @@
 }
 .mapDiagram {
     background-size: 100% 100%;
-    min-width: 15em;
+    min-width: 16em;
     min-height: 35em;
     width: 16em;
     height: 35em;
     margin: 1em;
+    border-radius: 5em;
 }
 .mapDiagram img {
     width: 100%;
@@ -81,12 +84,12 @@
     justify-content: space-around;
     min-height: 35em;
 }
-.partsRightContent {
-    text-align: left;
+.partsImage {
     width: 20em;
     max-height: 32em;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #71797E #28282B;
     margin-left: 1em;
+}
+.partsImage img {
+    width: 100%;
+    max-height: 32em;
 }

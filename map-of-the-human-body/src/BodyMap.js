@@ -18,11 +18,11 @@ function BodyMap(){
     const [diagramImage, setDiagramImage] = useState(organsInfo.get("All")[0]);
     const [parts, setParts] = useState(organsParts);
     const [part, setPart] = useState("All");
-    const [partImage, setPartImage] = useState(organsInfo.get("All")[0]);
+    const [diagramPartImage, setDiagramPartImage] = useState(organsInfo.get("All")[0]);
     const [partContent, setPartContent] = useState(null);
+    const [partImage, setPartImage] = useState(null);
 
     const [isSelected, setIsSelected] = useState(new Map());
-    const [sideSelected, setSideSelected] = useState(null);
 
     const diagramRef = useRef();
 
@@ -31,66 +31,73 @@ function BodyMap(){
         const map = new Map();
         if(option === "Organs"){
             const organsImage = organsInfo.get("All")[0];
-            setDiagramImage(organsImage); setParts(organsParts); setPart("All"); setPartImage(organsImage); setPartContent(null);
+            setDiagramImage(organsImage); setParts(organsParts); setPart("All"); setDiagramPartImage(organsImage);
             organsParts.forEach((name) => map.set(name, false));
         }else if(option === "Skeleton"){
             const skeletonImage = skeletonInfo.get("All")[0];
-            setDiagramImage(skeletonImage); setParts(skeletonParts); setPart("All"); setPartImage(skeletonImage); setPartContent(null);
+            setDiagramImage(skeletonImage); setParts(skeletonParts); setPart("All"); setDiagramPartImage(skeletonImage);
             skeletonParts.forEach((name) => map.set(name, false));
         }else if(option === "Muscles (Front)"){
             const musclesFrontImage = musclesFrontInfo.get("All")[0];
-            setDiagramImage(musclesFrontImage); setParts(musclesFrontParts); setPart("All"); setPartImage(musclesFrontImage); setPartContent(null);
+            setDiagramImage(musclesFrontImage); setParts(musclesFrontParts); setPart("All"); setDiagramPartImage(musclesFrontImage);
             musclesFrontParts.forEach((name) => map.set(name, false));
         }else if(option === "Muscles (Back)"){
             const musclesBackImage = musclesBackInfo.get("All")[0];
-            setDiagramImage(musclesBackImage); setParts(musclesBackParts); setPart("All"); setPartImage(musclesBackImage); setPartContent(null);
+            setDiagramImage(musclesBackImage); setParts(musclesBackParts); setPart("All"); setDiagramPartImage(musclesBackImage);
             musclesBackParts.forEach((name) => map.set(name, false));
         }
         const shownElements = document.querySelectorAll('.show');
         shownElements.forEach((element) => element.classList.remove('show'));
         diagramRef.current.scrollIntoView();
         setSelection(option);
+        setPartContent(null);
+        setPartImage(null);
         setIsSelected(map);
-        setSideSelected(null);
     }
 
-    const handleClick = (e, side) => {
+    const handleClick = (e) => {
         const name = e.target.value;
-        let newPartImage = null; let defaultImage = null;
-        let newPartContent = null; let defaultContent = null;
+        let newDiagramPartImage = null; let defaultDiagramPartImage = null;
+        let newPartContent = null;
+        let newPartImage = null;
         const currIsSelected = isSelected.get(name);
         const map = new Map();
         if(selection === "Organs"){
-            newPartImage = organsInfo.get(name)[0]; defaultImage = organsInfo.get("All")[0];
-            newPartContent = organsInfo.get(name)[1];
+            newDiagramPartImage = organsInfo.get(name)[0]; defaultDiagramPartImage = organsInfo.get("All")[0];
+            newPartContent = organsInfo.get(name)[2];
+            newPartImage = organsInfo.get(name)[1];
             organsParts.forEach((name) => map.set(name, false));
         }else if(selection === "Skeleton"){
-            newPartImage = skeletonInfo.get(name)[0]; defaultImage = skeletonInfo.get("All")[0];
-            newPartContent = skeletonInfo.get(name)[1];
+            newDiagramPartImage = skeletonInfo.get(name)[0]; defaultDiagramPartImage = skeletonInfo.get("All")[0];
+            newPartContent = skeletonInfo.get(name)[2];
+            newPartImage = skeletonInfo.get(name)[1];
             skeletonParts.forEach((name) => map.set(name, false));
         }else if(selection === "Muscles (Front)"){
-            newPartImage = musclesFrontInfo.get(name)[0]; defaultImage = musclesFrontInfo.get("All")[0];
-            newPartContent = musclesFrontInfo.get(name)[1];
+            newDiagramPartImage = musclesFrontInfo.get(name)[0]; defaultDiagramPartImage = musclesFrontInfo.get("All")[0];
+            newPartContent = musclesFrontInfo.get(name)[2];
+            newPartImage = musclesFrontInfo.get(name)[1];
             musclesFrontParts.forEach((name) => map.set(name, false));
         }else if(selection === "Muscles (Back)"){
-            newPartImage = musclesBackInfo.get(name)[0]; defaultImage = musclesBackInfo.get("All")[0];
-            newPartContent = musclesBackInfo.get(name)[1];
+            newDiagramPartImage = musclesBackInfo.get(name)[0]; defaultDiagramPartImage = musclesBackInfo.get("All")[0];
+            newPartContent = musclesBackInfo.get(name)[2];
+            newPartImage = musclesBackInfo.get(name)[1];
             musclesBackParts.forEach((name) => map.set(name, false));
         }
         if(!currIsSelected){
             map.set(name, true);
         }else{
-            newPartImage = defaultImage;
-            newPartContent = defaultContent;
+            newDiagramPartImage = defaultDiagramPartImage;
+            newPartContent = null;
+            newPartImage = null;
         }
-        const shownElements = document.querySelectorAll('.partsLeftContent, .partsRightContent');
+        const shownElements = document.querySelectorAll('.partsContent, .partsImage');
         shownElements.forEach((element) => element.classList.remove('show'));
         shownElements.forEach((element) => element.scroll(0, 0));
         setPart(name);
-        setPartImage(newPartImage);
+        setDiagramPartImage(newDiagramPartImage);
         setPartContent(newPartContent);
+        setPartImage(newPartImage);
         setIsSelected(map);
-        setSideSelected(side);
     }
 
     return(
@@ -107,30 +114,30 @@ function BodyMap(){
                     <option value="Muscles (Back)">Muscles (Back)</option>
                 </select>
                 <div className="mapDetails">
-                    <div className="partsLeftContent hide slideInLeft">
-                        {(isSelected.get(part) && sideSelected === "left") && <p style={{whiteSpace: "pre-line"}}>{partContent}</p>}
+                    <div className="partsContent hide slideInLeft">
+                        {isSelected.get(part) && <p style={{whiteSpace: "pre-line"}}>{partContent}</p>}
                     </div>
                     <div className="partsLeft hide slideInLeft">
                         {parts.slice(0, parts.length / 2).map((name) => (
                             <div key={name}>
-                                {(!isSelected.get(name) || sideSelected === "right") && <button value={name} onClick={(e) => handleClick(e, "left")}>{name}</button>}
-                                {(isSelected.get(name) && sideSelected === "left") && <button value={name} onClick={(e) => handleClick(e, "left")} style={{backgroundColor: "#71797E"}}>{name}</button>}
+                                {!isSelected.get(name) && <button value={name} onClick={(e) => handleClick(e)}>{name}</button>}
+                                {isSelected.get(name) && <button value={name} onClick={(e) => handleClick(e)} style={{backgroundColor: "#71797E"}}>{name}</button>}
                             </div>
                         ))}
                     </div>
                     <div className="mapDiagram hide slideInBottom" style={{backgroundImage: "linear-gradient(rgba(40,40,43,0.75), rgba(40,40,43,0.75)), url(" + diagramImage + ")"}} ref={diagramRef}>
-                        <img src={partImage} alt=""></img>
+                        <img src={diagramPartImage} alt=""></img>
                     </div>
                     <div className="partsRight hide slideInRight">
                         {parts.slice(parts.length / 2, parts.length).map((name) => (
                             <div key={name}>
-                                {(!isSelected.get(name) || sideSelected === "left") && <button value={name} onClick={(e) => handleClick(e, "right")}>{name}</button>}
-                                {(isSelected.get(name) && sideSelected === "right") && <button value={name} onClick={(e) => handleClick(e, "right")} style={{backgroundColor: "#71797E"}}>{name}</button>}
+                                {!isSelected.get(name) && <button value={name} onClick={(e) => handleClick(e)}>{name}</button>}
+                                {isSelected.get(name) && <button value={name} onClick={(e) => handleClick(e)} style={{backgroundColor: "#71797E"}}>{name}</button>}
                             </div>
                         ))}
                     </div>
-                    <div className="partsRightContent hide slideInRight">
-                        {(isSelected.get(part) && sideSelected === "right") && <p style={{whiteSpace: "pre-line"}}>{partContent}</p>}
+                    <div className="partsImage hide slideInRight">
+                        {isSelected.get(part) && <img src={partImage} alt=""></img>}
                     </div>
                 </div>
             </div>
