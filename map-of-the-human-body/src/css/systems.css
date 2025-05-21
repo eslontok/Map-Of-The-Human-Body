@@ -1,11 +1,35 @@
 /* SYSTEMS */
 
-.systems {
-    background: #28282B;
+.systemsScene {
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
     min-width: 100vw;
     min-height: 100vh;
-    margin: 0 auto;
+}
+.systemsList {
+    background: #28282B;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    border-bottom: 1px solid #D3D3D3;
+}
+.systemsList button {
+    background-color: #353935;
+    width: 10em;
+    height: 2em;
+    border-radius: 1em;
+}
+.systemsList button:hover{
+    outline: 2px solid #00FFFF;
+    cursor: pointer;
+}
+.systems {
+    max-width: 70em;
     text-align: center;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 .systems h2 {
     color: #FFFFFF;
