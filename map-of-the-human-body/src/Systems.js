@@ -1,8 +1,10 @@
 import "./css/systems.css";
 import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
+import systemsInfo from "./SystemsInfo";
 
 function Systems(){
+    
     return(
         <div className="systemsScene">
             <div className="systemsList">
@@ -19,8 +21,13 @@ function Systems(){
             <div className="systems">
                 <Observer/>
                 <ScrollToTop/>
-                <h2>Systems Page</h2>
-                <p>Coming Soon!</p>
+                {systemsInfo.map((system) => (
+                    <div className="systemDetails" key={system.title} >
+                        <h2 className="hide slideInRight">{system.title}</h2>
+                        <img className="hide slideInRight animate-stagger-short" src={system.image} alt=""></img>
+                        <p className="hide slideInRight animate-stagger-long">{system.body}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );

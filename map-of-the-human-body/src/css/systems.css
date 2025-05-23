@@ -20,18 +20,33 @@
     height: 2em;
     border-radius: 1em;
 }
-.systemsList button:hover{
+.systemsList button:hover {
     outline: 2px solid #00FFFF;
     cursor: pointer;
 }
 .systems {
-    max-width: 70em;
-    text-align: center;
+    max-width: 60em;
     margin: 0 auto;
     padding-top: 2em;
     padding-bottom: 2em;
 }
-.systems h2 {
+.systemDetails {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+.systemDetails:hover {
+    box-shadow: 5px 5px 15px #36454F;
+}
+.systemDetails h2 {
     color: #FFFFFF;
-    margin-bottom: 5px;
+    margin-bottom: 1em;
+}
+.systemDetails img {
+    max-width: 30em;
+    max-height: 30em;
+    float: left;
+    margin-right: 1em;
+}
+.systemDetails p {
+    font-size: 1.2em;
 }
