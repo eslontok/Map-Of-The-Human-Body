@@ -21,7 +21,7 @@ function useFetch(urlEndpoint){
                     setIsLoading(false);
                     setError(null);
                 })
-                .catch(error =>{
+                .catch(error => {
                     if(error.name !== "AbortError"){
                         setIsLoading(false);
                         setError(error.message);
