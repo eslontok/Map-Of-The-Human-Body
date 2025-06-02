@@ -42,9 +42,9 @@ function Systems(){
                         const map = initializeMap();
                         map.set(system.title, node);
                     }}>
-                        <h2 className="hide slideInRight">{system.title}</h2>
+                        <h2 className="hide slideInRight">{system.title} System</h2>
                         <img className="hide slideInRight animate-stagger-short" src={system.image} alt=""></img>
-                        <p className="hide slideInRight animate-stagger-long">{system.body}</p>
+                        <p className="hide slideInRight animate-stagger-long" style={{whiteSpace: "pre-line"}}>{system.body}</p>
                     </div>
                 ))}
             </div>
