@@ -39,7 +39,10 @@
 }
 .systemDetails h2 {
     color: #FFFFFF;
+    background-color: #36454F;
     margin-bottom: 1em;
+    padding: 0.25em;
+    border-radius: 0.5em;
 }
 .systemDetails img {
     max-width: 20em;
