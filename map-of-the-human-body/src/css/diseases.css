@@ -1,13 +1,55 @@
 /* DISEASES */
 
-.diseases {
-    background: #28282B;
+.diseasesScene {
+    background: linear-gradient(rgba(40,40,43,0.8), rgba(40,40,43,0.8)), url("images/diseases.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
     min-width: 100vw;
     min-height: 100vh;
-    margin: 0 auto;
-    text-align: center;
 }
-.diseases h2 {
+.diseasesList {
+    background: #28282B;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    border-bottom: 1px solid #D3D3D3;
+}
+.diseasesList button {
+    background-color: #353935;
+    width: 12em;
+    height: 2em;
+    border-radius: 1em;
+}
+.diseasesList button:hover {
+    outline: 2px solid #00FFFF;
+    cursor: pointer;
+}
+.diseases {
+    max-width: 60em;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.diseaseDetails {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+.diseaseDetails:hover {
+    box-shadow: 5px 5px 15px #36454F;
+}
+.diseaseDetails h2 {
     color: #FFFFFF;
-    margin-bottom: 5px;
+    background-color: #36454F;
+    margin-bottom: 1em;
+    padding: 0.25em;
+    border-radius: 0.5em;
+}
+.diseaseDetails img {
+    max-width: 20em;
+    max-height: 20em;
+    float: left;
+    margin-right: 1em;
+}
+.diseaseDetails p {
+    font-size: 1.2em;
 }
