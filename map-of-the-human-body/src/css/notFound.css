@@ -1,10 +1,19 @@
 /* NOT FOUND */
 
+.notFoundScene {
+    background: linear-gradient(rgba(40,40,43,0.9), rgba(40,40,43,0.9)), url("images/neurons.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+}
 .notFound {
     margin: 0 auto;
     text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 .notFound h2 {
     color: #FFFFFF;
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
 }
