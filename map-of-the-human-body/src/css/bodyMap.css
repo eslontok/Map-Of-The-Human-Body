@@ -16,18 +16,18 @@
 }
 .bodyMap h2 {
     color: #FFFFFF;
-    margin-bottom: 5px;
+    margin-bottom: 1em;
 }
 .bodyMap label {
     display: inline-block;
     color: #FFFFFF;
-    margin-right: 5px;
+    margin-right: 0.5em;
 }
 .bodyMap select {
     background: none;
-    padding: 2px;
+    padding: 0.5em;
     border: 1px solid #FFFFFF;
-    border-radius: 16px;
+    border-radius: 1em;
     cursor: pointer;
 }
 .bodyMap option {
@@ -37,7 +37,7 @@
     background-color: #353935;
     width: 10em;
     height: 2em;
-    border-radius: 10px;
+    border-radius: 1em;
 }
 .bodyMap button:hover {
     outline: 2px solid #00FFFF;

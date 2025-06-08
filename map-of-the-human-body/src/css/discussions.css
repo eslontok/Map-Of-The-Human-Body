@@ -17,29 +17,29 @@
 }
 .discussions h2 {
     color: #FFFFFF;
-    margin-bottom: 10px;
+    margin-bottom: 0.5em;
 }
 .discussions button {
     color: #FFFFFF;
     background: #353935;
-    border-radius: 16px;
+    border-radius: 1em;
     font-weight: bold;
 }
 .discussions button:hover {
-    outline: 2px solid #FFFFFF;
+    outline: 2px solid #00FFFF;
     cursor: pointer;
 }
 .discussions label {
     display: inline-block;
     color: #FFFFFF;
-    margin-right: 5px;
-    margin-bottom: 15px;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
 }
 .discussions select {
     background: none;
-    padding: 2px;
+    padding: 0.5em;
     border: 1px solid #FFFFFF;
-    border-radius: 16px;
+    border-radius: 1em;
     cursor: pointer;
 }
 .discussions option {

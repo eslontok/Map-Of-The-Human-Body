@@ -19,10 +19,10 @@
     background-image: url("images/brain.jpg");
     background-size: 100% 100%;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0em;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
 }
 .header h2 {
     background: none;
@@ -30,18 +30,19 @@
     font-size: 3em;
     color: #FFFFFF;
     text-align: left;
-    margin: 20px;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
 }
 .header button {
     background-color: #353935;
     position: relative;
     display: block;
-    border-radius: 20px;
+    border-radius: 1em;
     font-size: 1.2em;
     font-weight: bold;
     width: 8em;
-    padding: 5px;
-    margin: 20px;
+    height: 2em;
+    margin-left: 2em;
 }
 .header button:hover {
     outline: 3px solid #00FFFF;
@@ -70,7 +71,7 @@
     background-color: #353935;
     width: 10em;
     height: 10em;
-    border-radius: 20px;
+    border-radius: 2em;
     padding: 1em;
     margin-top: 15%;
     margin-bottom: 15%;

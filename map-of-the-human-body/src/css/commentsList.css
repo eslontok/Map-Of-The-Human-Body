@@ -1,11 +1,11 @@
 /* COMMENTS LIST */
 
 .commentsList {
-    margin-left: 15px;
+    margin-left: 1em;
 }
 .commentPreview {
-    padding: 5px 5px;
-    margin-bottom: 15px;
+    padding: 0.5em;
+    margin-bottom: 1em;
 }
 .commentPreview:hover {
     box-shadow: 5px 5px 15px #36454F;
@@ -14,15 +14,13 @@
     color: #FFFFFF;
 }
 .commentPreview p {
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 .commentPreview span {
-    font-size: 16px;
+    font-size: 1.2em;
     color: #FFFFFF;
     background: #353935;
-    font-weight: bold;
     vertical-align: middle;
-    padding-bottom: 2px;
-    margin-right: 5px;
+    margin-right: 0.25em;
 }
