@@ -3,8 +3,13 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
+/**
+ * Create component displays the Create Discussion page and handles any logic relating to the Create Discussion Page
+ * @author Earl Lontok
+ */
 function Create(){
 
+    //holds the properties of a discussion
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [body, setBody] = useState("");
@@ -15,6 +20,7 @@ function Create(){
     const [isUploading, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
+    //adds a new discussion object to the discussions resource (JSON Server)
     const handleSubmit = (e) => {
         e.preventDefault();
         const discussion = {title, author, body, likes, dislikes, comments};

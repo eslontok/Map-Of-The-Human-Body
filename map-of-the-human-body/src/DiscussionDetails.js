@@ -6,9 +6,15 @@ import useFetch from "./useFetch";
 import map from "./DiscussionsLikeDislikeMap";
 import ScrollToTop from "./ScrollToTop";
 
+/**
+ * DiscussionDetails component displays a specific discussion's page and handles any logic relating to that specific discussion's page
+ * @author Earl Lontok
+ */
 function DiscussionDetails(){
 
     const {id} = useParams();
+
+    //holds the fetched discussion data with the associated ID from the discussions resource (JSON server)
     const {data: discussion, setData: setDiscussion, isLoading, error} = useFetch("http://localhost:8000/discussions/" + id);
 
     const [isDeleting, setIsDeleting] = useState(false);
@@ -16,6 +22,7 @@ function DiscussionDetails(){
 
     const [selection, setSelection] = useState("-");
 
+    //updates the likes/dislikes of the discussion with the associated ID to the discussions resource (JSON Server)
     const updateLikeDislike = (id, like, dislike) => {
         const newDiscussion = {...discussion};
         newDiscussion.likes += like;
@@ -31,7 +38,9 @@ function DiscussionDetails(){
         setDiscussion(newDiscussion);
     }
 
-    const handleLike = (id) => { //map.get(id) = [liked?, disliked?] for discussion.id === id
+    //updates the likes of the discussion with the associated ID
+    //map.get(id) = [liked?, disliked?] for discussion.id === id
+    const handleLike = (id) => {
         let like = 0;
         let dislike = 0;
         if(map.has(id)){
@@ -55,7 +64,9 @@ function DiscussionDetails(){
         updateLikeDislike(id, like, dislike);
     }
 
-    const handleDislike = (id) => { //map.get(id) = [liked?, disliked?] for discussion.id === id
+    //updates the dislikes of the discussion with the associated ID
+    //map.get(id) = [liked?, disliked?] for discussion.id === id
+    const handleDislike = (id) => {
         let like = 0;
         let dislike = 0;
         if(map.has(id)){
@@ -79,6 +90,7 @@ function DiscussionDetails(){
         updateLikeDislike(id, like, dislike);
     }
 
+    //deletes the discussion object with the associated ID from the discussions resource (JSON Server)
     const handleDelete = () => {
         setIsDeleting(true);
         setTimeout(() => {
@@ -91,7 +103,8 @@ function DiscussionDetails(){
         }, 500);
     }
 
-    //discussions array is iterated left to right and rendered top to bottom
+    //sorts the comments by highest rating
+    //comments array is iterated left to right and rendered top to bottom
     //therefore, an ascending array is rendered in ascending order top to bottom
     //goal: highest rating should be top to bottom - invert 1 and -1 when comparing
     const compareAsc = (com1, com2) => {
@@ -106,7 +119,8 @@ function DiscussionDetails(){
         return 0;
     }
 
-    //discussions array is iterated left to right and rendered top to bottom
+    //sorts the comments by lowest rating
+    //comments array is iterated left to right and rendered top to bottom
     //therefore, a descending array is rendered in descending order top to bottom
     //goal: lowest rating should be top to bottom - invert 1 and -1 when comparing
     const compareDesc = (com1, com2) => {
@@ -121,6 +135,7 @@ function DiscussionDetails(){
         return 0;
     }
 
+    //updates the comment order with respect to rating (highest/lowest)
     const handleChange = (e) => {
         const comments = discussion.comments;
         if(e.target.value === "Highest Rating"){

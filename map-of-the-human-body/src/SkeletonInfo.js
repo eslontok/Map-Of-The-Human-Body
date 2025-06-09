@@ -11,6 +11,10 @@ import Thigh from "./css/images/skeleton-body/skeleton-thigh.png"; import partTh
 import LowerLeg from "./css/images/skeleton-body/skeleton-lower-leg.png"; import partLowerLeg from "./css/images/skeleton-body/part-lower-leg.png";
 import Feet from "./css/images/skeleton-body/skeleton-feet.png"; import partFeet from "./css/images/skeleton-body/part-feet.png";
 
+/**
+ * skeletonInfo map stores skeleton names, images, and descriptions for the BodyMap component
+ * @author Earl Lontok
+ */
 const skeletonInfo = new Map();
 
 skeletonInfo.set("All", [All, null, "The skeleton is the body's support structure. Composed of bones, cartilage, ligaments, and tendons, the skeleton has 2 main functions: giving the body its shape and protection.\n\nThe skeleton supports the weight of the body and serves as the anchor for all tissue that connects to it. It also acts as armor (the ribs in particular), protecting vital organs.\n\nBones are rigid tissues composed of cells, proteins (ex: collagen), and minerals (ex: calcium). Cartilage is a flexible connective tissue located at joints, acting as a shock absorber and preventing friction between bones. Ligaments connect bones to bones, while tendons connect muscles to bones."]);

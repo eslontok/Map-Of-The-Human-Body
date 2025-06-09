@@ -2,6 +2,10 @@ import "./css/commentsList.css";
 import map from "./CommentsLikeDislikeMap";
 import Observer from "./Observer";
 
+/**
+ * CommentsList component displays all comments of a discussion onto the DiscussionDetails page and handles any logic relating to those comments
+ * @author Earl Lontok
+ */
 function CommentsList(props){
 
     const discussion = props.discussion;
@@ -10,6 +14,7 @@ function CommentsList(props){
     const id = discussion.id;
     const comments = discussion.comments;
 
+    //updates the likes/dislikes of the comment with the associated ID to the discussion with the associated ID to the discussions resource (JSON Server)
     const updateLikeDislike = (commentId, like, dislike) => {
         const newComments = comments.map(comment => {
             const newComment = {...comment};
@@ -31,10 +36,11 @@ function CommentsList(props){
         setDiscussion(newDiscussion);
     }
 
+    //updates the likes of the comment with the associated ID
     const handleLike = (commentId) => {
         let like = 0;
         let dislike = 0;
-        if(map.has(id)){ //at least 1 comment under discussion.id === id has been liked
+        if(map.has(id)){ //at least 1 comment under discussion.id === id has been liked/disliked
             const commentsMap = map.get(id);
             if(commentsMap.has(commentId)){
                 const arr = commentsMap.get(commentId);
@@ -55,7 +61,7 @@ function CommentsList(props){
                 like = 1;
             }
             map.set(id, commentsMap);
-        }else{ //no comments under discussion.id === id have been liked
+        }else{ //no comments under discussion.id === id have been liked/disliked
             const commentsMap = new Map();
             commentsMap.set(commentId, [true, false]);
             map.set(id, commentsMap);
@@ -64,10 +70,11 @@ function CommentsList(props){
         updateLikeDislike(commentId, like, dislike);
     }
 
+    //updates the dislikes of the comment with the associated ID
     const handleDislike = (commentId) => {
         let like = 0;
         let dislike = 0;
-        if(map.has(id)){
+        if(map.has(id)){ //at least 1 comment under discussion.id === id has been liked/disliked
             const commentsMap = map.get(id);
             if(commentsMap.has(commentId)){
                 const arr = commentsMap.get(commentId);
@@ -88,7 +95,7 @@ function CommentsList(props){
                 dislike = 1;
             }
             map.set(id, commentsMap);
-        }else{
+        }else{ //no comments under discussion.id === id have been liked/disliked
             const commentsMap = new Map();
             commentsMap.set(commentId, [false, true]);
             map.set(id, commentsMap);
@@ -97,6 +104,7 @@ function CommentsList(props){
         updateLikeDislike(commentId, like, dislike);
     }
 
+    //deletes the comment object with the associated ID from the discussion with the associated ID from the discussions resource (JSON Server)
     const handleDelete = (commentId) => {
         const newComments = comments.filter(comment => comment.commentId !== commentId);
         const newDiscussion = {...discussion};

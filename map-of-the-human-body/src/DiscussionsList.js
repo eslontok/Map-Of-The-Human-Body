@@ -3,12 +3,18 @@ import {Link} from "react-router-dom";
 import map from "./DiscussionsLikeDislikeMap";
 import Observer from "./Observer";
 
+/**
+ * DiscussionsList component displays all discussions onto the Discussions page and handles any logic relating to those discussions
+ * @author Earl Lontok
+ */
 function DiscussionsList(props){
 
     const discussions = props.discussions;
     const updateLikeDislike = props.updateLikeDislike;
 
-    const handleLike = (id) => { //map.get(id) = [liked?, disliked?] for discussion.id === id
+    //updates the likes of the discussion with the associated ID
+    //map.get(id) = [liked?, disliked?] for discussion.id === id
+    const handleLike = (id) => {
         let like = 0;
         let dislike = 0;
         if(map.has(id)){
@@ -32,7 +38,9 @@ function DiscussionsList(props){
         updateLikeDislike(id, like, dislike);
     }
 
-    const handleDislike = (id) => { //map.get(id) = [liked?, disliked?] for discussion.id === id
+    //updates the dislikes of the discussion with the associated ID
+    //map.get(id) = [liked?, disliked?] for discussion.id === id
+    const handleDislike = (id) => {
         let like = 0;
         let dislike = 0;
         if(map.has(id)){

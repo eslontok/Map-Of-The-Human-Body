@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 //import './index.css';
 import App from './App';
 
+/**
+ * This file starts the application - renders React components to the React DOM
+ * @author Earl Lontok
+ */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

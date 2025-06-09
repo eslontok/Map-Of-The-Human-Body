@@ -1,11 +1,17 @@
 import {useState, useEffect} from "react";
 
+/**
+ * useFetch custom hook fetches data from the JSON Server
+ * returns the fetched data, a setData function, a loading status, and an error (if present)
+ * @author Earl Lontok
+ */
 function useFetch(urlEndpoint){
 
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    //fetches data from the JSON Server using the urlEndpoint
     useEffect(() => {
         const abort = new AbortController();
         setTimeout(() => {

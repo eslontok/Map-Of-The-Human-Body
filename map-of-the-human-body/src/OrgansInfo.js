@@ -12,6 +12,10 @@ import LI from "./css/images/organs-body/organs-LI.png"; import partLI from "./c
 import Kidneys from "./css/images/organs-body/organs-kidneys.png"; import partKidneys from "./css/images/organs-body/part-kidneys.png";
 import Bladder from "./css/images/organs-body/organs-bladder.png"; import partBladder from "./css/images/organs-body/part-bladder.png";
 
+/**
+ * organsInfo map stores organ names, images, and descriptions for the BodyMap component
+ * @author Earl Lontok
+ */
 const organsInfo = new Map();
 
 organsInfo.set("All", [All, null, "Organs are specialized structures that perform a specific function or set of functions.\n\nThey are not found in all organisms - they are unique to multicellular ones. The cells of multicellular organisms (like humans) organize into tissues, and tissues organize and specialize into organs. Multiple organs often work together to form organ systems, which carry out complex functions essential to the proper development and survival of the organism.\n\nIn many cases, these functions involve maintaining homeostasis, an internal state in which physical and chemical conditions are dynamically kept in equilibrium. It is in this homeostatic state that the organism functions optimally."]);

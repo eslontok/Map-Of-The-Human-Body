@@ -1,5 +1,9 @@
 import {Link} from 'react-router-dom';
 
+/**
+ * Navbar component displays the top navigation bar and handles any logic relating to the top navigation bar
+ * @author Earl Lontok
+ */
 function Navbar(){
     return(
         <nav className="navbar">

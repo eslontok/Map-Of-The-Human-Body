@@ -7,13 +7,19 @@ import skeletonInfo from "./SkeletonInfo";
 import musclesFrontInfo from "./MusclesFrontInfo";
 import musclesBackInfo from "./MusclesBackInfo";
 
+/**
+ * BodyMap component displays the Map page and handles any logic relating to the Map page
+ * @author Earl Lontok
+ */
 function BodyMap(){
 
+    //holds the names of the organs, bones, front muscles, and back muscles
     const organsParts = ["All","Brain","Esophagus","Lungs","Heart","Stomach","Liver","Gallbladder","Pancreas","Small Intestine","Large Intestine","Kidneys","Bladder","Gonads"]; //14
     const skeletonParts = ["All","Head","Collar","Upper Arm","Forearm","Hands","Spine","Torso","Hip","Thigh","Lower Leg","Feet"]; //12
     const musclesFrontParts = ["All","Head","Shoulders","Upper Arm","Forearm","Hands","Chest","Abdomen","Obliques","Thigh","Lower Leg","Feet"]; //12
     const musclesBackParts = ["All","Traps","Shoulders","Upper Arm","Lats","Lower Back","Glutes","Thigh","Lower Leg"]; //9
 
+    //holds the state variables that determine what to display on the body map
     const [selection, setSelection] = useState("Organs");
     const [diagramImage, setDiagramImage] = useState(organsInfo.get("All")[0]);
     const [parts, setParts] = useState(organsParts);
@@ -26,6 +32,7 @@ function BodyMap(){
 
     const diagramRef = useRef();
 
+    //the map has been changed - updates what is displayed (parts, images, and descriptions)
     const handleChange = (e) => {
         const option = e.target.value;
         const map = new Map();
@@ -55,6 +62,7 @@ function BodyMap(){
         setIsSelected(map);
     }
 
+    //a part of the map has been clicked - display/hide part images and descriptions
     const handleClick = (e) => {
         const name = e.target.value;
         let newDiagramPartImage = null; let defaultDiagramPartImage = null;

@@ -4,16 +4,22 @@ import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
 import systemsInfo from "./SystemsInfo";
 
+/**
+ * Systems component displays the Systems page and handles any logic relating to the Systems page
+ * @author Earl Lontok
+ */
 function Systems(){
     
     const refs = useRef();
 
+    //scrolls to the referenced element (the system that was clicked)
     const scrollToSystem = (title) => {
         const map = initializeMap();
         const node = map.get(title);
         node.scrollIntoView({behavior: "smooth"});
     }
 
+    //initializes refs to be a map that holds referenced elements (the systems)
     const initializeMap = () => {
         if(refs.current == null){
             refs.current = new Map();

@@ -12,6 +12,11 @@ import Edit from './Edit';
 import NotFound from './NotFound';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+/**
+ * App component serves as the root component
+ * Renders the component associated with the current route path (default path leads to Home page)
+ * @author Earl Lontok
+ */
 function App() {
   return (
     <Router>

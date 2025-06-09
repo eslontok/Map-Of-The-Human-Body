@@ -5,11 +5,17 @@ import DiscussionsList from "./DiscussionsList";
 import useFetch from "./useFetch";
 import ScrollToTop from "./ScrollToTop";
 
+/**
+ * Discussions component displays the Discussions page and handles any logic relating to the Discussions page
+ * @author Earl Lontok
+ */
 function Discussions(){
 
+    //holds all discussion objects from the discussions resource (JSON server)
     const {data: discussions, setData: setDiscussions, isLoading, error} = useFetch("http://localhost:8000/discussions");
     const [selection, setSelection] = useState("-");
 
+    //updates the likes/dislikes of discussions to the discussions resource (JSON Server)
     const updateLikeDislike = (id, like, dislike) => {
         const newDiscussions = discussions.map(discussion => {
             const newDiscussion = {...discussion};
@@ -30,6 +36,7 @@ function Discussions(){
         setDiscussions(newDiscussions);
     }
 
+    //sorts the discussions by highest rating
     //discussions array is iterated left to right and rendered top to bottom
     //therefore, an ascending array is rendered in ascending order top to bottom
     //goal: highest rating should be top to bottom - invert 1 and -1 when comparing
@@ -45,6 +52,7 @@ function Discussions(){
         return 0;
     }
 
+    //sorts the discussions by lowest rating
     //discussions array is iterated left to right and rendered top to bottom
     //therefore, a descending array is rendered in descending order top to bottom
     //goal: lowest rating should be top to bottom - invert 1 and -1 when comparing
@@ -60,6 +68,7 @@ function Discussions(){
         return 0;
     }
 
+    //updates the discussion order with respect to rating (highest/lowest)
     const handleChange = (e) => {
         if(e.target.value === "Highest Rating"){
             discussions.sort(compareAsc);

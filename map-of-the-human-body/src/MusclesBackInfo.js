@@ -8,6 +8,10 @@ import Glutes from "./css/images/muscle-body-back/muscle-glutes.png"; import par
 import Thigh from "./css/images/muscle-body-back/muscle-thigh.png"; import partThigh from "./css/images/muscle-body-back/part-thigh.png";
 import LowerLeg from "./css/images/muscle-body-back/muscle-lower-leg.png"; import partLowerLeg from "./css/images/muscle-body-back/part-lower-leg.png";
 
+/**
+ * musclesBackInfo map stores back muscle names, images, and descriptions for the BodyMap component
+ * @author Earl Lontok
+ */
 const musclesBackInfo = new Map();
 
 musclesBackInfo.set("All", [All, null, "Muscles are specialized tissues located throughout the body, and they are responsible for both voluntary and involuntary movement.\n\nVoluntary movements are actively facilitated by the person (thought becomes action). Examples include walking, lifting, speaking, and chewing.\n\nInvoluntary movements occur automatically without thought. Examples include breathing, beating of the heart, digestion, and muscle spasms.\n\nMuscles are composed of muscle fibers, which consist of even smaller fibers called myofibrils. Repeating units of sarcomeres comprise each myofibril and include contractile proteins called actin (thin filaments) and myosin (thick filaments). These proteins interact and generate contractile force, sliding the proteins toward each other and resulting in muscle movement.\n\nThere are 3 types of muscles: skeletal, smooth, and cardiac. Skeletal muscles anchor to bones via ligaments and enable voluntary movement. Smooth muscles line the walls of internal organs and blood vessels and enable involuntary movement. Cardiac muscles line the walls of the heart and enable the heart to pump and circulate blood throughout the body."]);

@@ -4,16 +4,22 @@ import Observer from "./Observer";
 import ScrollToTop from "./ScrollToTop";
 import diseasesInfo from "./DiseasesInfo";
 
+/**
+ * Diseases component displays the Diseases page and handles any logic relating to the Diseases page
+ * @author Earl Lontok
+ */
 function Diseases(){
 
     const refs = useRef();
 
+    //scrolls to the referenced element (the disease that was clicked)
     const scrollToDisease = (title) => {
         const map = initializeMap();
         const node = map.get(title);
         node.scrollIntoView({behavior: "smooth"});
     }
 
+    //initializes refs to be a map that holds referenced elements (the diseases)
     const initializeMap = () => {
         if(refs.current == null){
             refs.current = new Map();

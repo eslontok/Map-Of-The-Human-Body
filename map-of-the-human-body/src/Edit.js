@@ -3,14 +3,20 @@ import {useState, useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
+/**
+ * Edit component displays the Edit Discussion page and handles any logic relating to the Edit Discussion page
+ * @author Earl Lontok
+ */
 function Edit(){
 
     const {id} = useParams();
 
+    //holds the fetched discussion data with the associated ID from the discussions resource (JSON server)
     const [discussion, setDiscussion] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    //holds the properties of the discussion with the associated ID
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [body, setBody] = useState("");
@@ -18,6 +24,7 @@ function Edit(){
     const [isUploading, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
+    //updates the discussion object with the associated ID to the discussions resource (JSON Server)
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsUploading(true);
@@ -37,6 +44,7 @@ function Edit(){
         }, 500);
     }
 
+    //fetches the discussion data with the associated ID from the discussions resource (JSON Server)
     useEffect(() => {
         const abort = new AbortController();
         setTimeout(() => {

@@ -4,11 +4,18 @@ import {useParams, useNavigate} from "react-router-dom";
 import useFetch from "./useFetch";
 import ScrollToTop from "./ScrollToTop";
 
+/**
+ * Comments component displays the Create Comment page and handles any logic relating to the Create Comment page
+ * @author Earl Lontok
+ */
 function Comments(){
 
     const {id} = useParams();
+
+    //holds the fetched discussion data with the associated ID from the discussions resource (JSON server)
     const {data: discussion, isLoading, error} = useFetch("http://localhost:8000/discussions/" + id);
 
+    //holds the properties of a comment
     const [author, setAuthor] = useState("");
     const [body, setBody] = useState("");
     const likes = 0;
@@ -17,6 +24,7 @@ function Comments(){
     const [isUploading, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
+    //generates a unique numerical ID
     const genId = () => {
         let newCommentId = -1;
         for(let i = 0; i < discussion.comments.length; i++){
@@ -28,6 +36,7 @@ function Comments(){
         return newCommentId + 1;
     }
 
+    //adds a new comment object to the discussion with the associated ID to the discussions resource (JSON server)
     const handleSubmit = (e) => {
         e.preventDefault();
         const commentId = genId();

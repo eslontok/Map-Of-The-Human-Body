@@ -1,5 +1,10 @@
 import {useEffect} from "react";
 
+/**
+ * Observer function watches what is currently displayed on the viewport (the screen)
+ * Adds "show" to any element's class name that contains "hide" when the element appears on the screen
+ * @author Earl Lontok
+ */
 function Observer(){
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

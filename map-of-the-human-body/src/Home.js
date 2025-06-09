@@ -7,10 +7,15 @@ import body from "./css/images/body.png";
 import system from "./css/images/system.png";
 import disease from "./css/images/disease.png";
 
+/**
+ * Home component displays the Home page and handles any logic relating to the Home page
+ * @author Earl Lontok
+ */
 function Home(){
 
     const exploreRef = useRef();
 
+    //scrolls to the referenced element (the 3 buttons)
     const handleExplore = () => {
         exploreRef.current.scrollIntoView({behavior: "smooth"});
     }
